@@ -896,5 +896,6 @@ manifest = {
     "description": "ICAI Chartered Accountancy New Scheme Mock Exams, Case Scenarios, RTP/MTP Archive, TAHDCO & SIRC TN Public Coaching Guide, and 24/7 Bilingual Tamil+English Gemini AI Coach.",
 }
 (CA_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+(CA_DIR / "CNAME").write_text("caprep.memnos.net\n", encoding="utf-8")
 (CA_DIR / ".gitignore").write_text("ca_data.db\nca_data.db-*\n__pycache__/\n*.pyc\n.DS_Store\n", encoding="utf-8")
 print("Generated /Users/thameema/git/ca-prep/index.html, ca_interactive_practice.html, manifest.json, and .gitignore successfully!")

@@ -67,7 +67,7 @@ def load_admin_secrets() -> dict:
         "admin_key": "",
         "master_passcode": "",
         "ga_measurement_id": "G-KGL9DJNFNR",
-        "public_frontend_url": "https://thameema.github.io/ca-prep",
+        "public_frontend_url": "https://caprep.memnos.net",
         "public_api_url": "http://localhost:8096",
         "daily_ai_limit_per_code": 40,
         "max_devices_per_code": 2,
@@ -1259,7 +1259,7 @@ class CAMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 conn.commit()
                 conn.close()
 
-            frontend_url = (cfg.get("public_frontend_url") or "https://thameema.github.io/ca-prep").rstrip("/")
+            frontend_url = (cfg.get("public_frontend_url") or "https://caprep.memnos.net").rstrip("/")
             magic_link = f"{frontend_url}/?code={urllib.parse.quote(code or '')}"
             revoke_sig = sign_admin_token(req_token, "revoke")
             approve_sig = sign_admin_token(req_token, "approve")
@@ -1522,7 +1522,7 @@ class CAMasteryHandler(http.server.SimpleHTTPRequestHandler):
                     conn.close()
 
                 api_base = (cfg.get("public_api_url") or f"http://localhost:{PORT}").rstrip("/")
-                frontend_url = (cfg.get("public_frontend_url") or "https://thameema.github.io/ca-prep").rstrip("/")
+                frontend_url = (cfg.get("public_frontend_url") or "https://caprep.memnos.net").rstrip("/")
                 admin_console_url = f"{frontend_url}/?admin={urllib.parse.quote(str(cfg.get('admin_key') or ''))}"
                 magic_link = f"{frontend_url}/?code={urllib.parse.quote(code)}"
                 revoke_sig = sign_admin_token(req_token, "revoke")
