@@ -1,0 +1,3934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.json">
+  <title>Tamil Nadu ICAI CA Mastery Hub — Foundation, Intermediate, Final & SPOM Mock Exams + Bilingual Gemini AI Coach</title>
+  <!-- Google tag (gtag.js — G-KGL9DJNFNR / GTM-T8765BS6) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGL9DJNFNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KGL9DJNFNR', { send_page_view: true });
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous" onload="window.rerenderAllMath && window.rerenderAllMath()"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/mhchem.min.js" crossorigin="anonymous" onload="window.rerenderAllMath && window.rerenderAllMath()"></script>
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --surface: #ffffff;
+      --surface-alt: #f8fafc;
+      --navy: #0f172a;
+      --navy-mid: #1e293b;
+      --primary: #0f766e;
+      --primary-hover: #115e59;
+      --primary-light: #f0fdfa;
+      --blue: #1d4ed8;
+      --blue-light: #eff6ff;
+      --emerald: #047857;
+      --emerald-bg: #ecfdf5;
+      --rose: #be123c;
+      --rose-bg: #fff1f2;
+      --amber: #b45309;
+      --amber-bg: #fffbeb;
+      --omr-pink: #db2777;
+      --text-main: #0f172a;
+      --text-sec: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --radius: 10px;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --mobile-nav-h: 62px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans Tamil", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TOP HEADER */
+    header {
+      background: var(--navy);
+      color: #ffffff;
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid #1e293b;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      z-index: 50;
+    }
+
+    .header-left, .header-right {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: 0.25px;
+      color: #f8fafc;
+    }
+
+    .brand-badge {
+      background: #0d9488;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 4px 7px;
+      border-radius: 5px;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+    }
+
+    .desktop-nav-tabs {
+      display: flex;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-tab {
+      background: transparent;
+      border: none;
+      color: #cbd5e1;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .nav-tab:hover { color: #ffffff; }
+    .nav-tab.active { background: #0d9488; color: #ffffff; }
+
+    .header-select, .header-btn {
+      background: rgba(255, 255, 255, 0.09);
+      color: #f1f5f9;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      max-width: 260px;
+      text-overflow: ellipsis;
+    }
+
+    .header-select option {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .header-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* MAIN VIEWS */
+    .view-section {
+      display: none;
+      flex: 1;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .view-section.active {
+      display: flex;
+    }
+
+    /* DESKTOP 3-PANE WORKSPACE */
+    .workspace-layout {
+      display: grid;
+      grid-template-columns: 235px 1fr 375px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    /* LEFT OMR SIDEBAR */
+    .omr-sidebar {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .omr-header {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-alt);
+      flex-shrink: 0;
+    }
+
+    .omr-header h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-sec);
+      margin-bottom: 6px;
+    }
+
+    .omr-legend {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .legend-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    .omr-grid-wrap {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .omr-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+    }
+
+    .omr-num-btn {
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-sec);
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+
+    .omr-num-btn.current {
+      outline: 2px solid var(--navy);
+      outline-offset: 1px;
+    }
+
+    .omr-num-btn.answered {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      color: #ffffff;
+    }
+
+    .omr-num-btn.review {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #ffffff;
+    }
+
+    .omr-num-btn.wrong-review {
+      background: var(--rose);
+      border-color: var(--rose);
+      color: #ffffff;
+    }
+
+    .omr-footer {
+      padding: 12px;
+      border-top: 1px solid var(--border);
+      background: var(--surface-alt);
+      font-size: 11.5px;
+      color: var(--text-sec);
+      line-height: 1.5;
+      flex-shrink: 0;
+    }
+
+    /* CENTER QUESTION WORKSPACE */
+    .exam-main {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--bg);
+      min-height: 0;
+    }
+
+    .exam-toolbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .subject-pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      max-width: 100%;
+      padding-bottom: 2px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .subject-pills::-webkit-scrollbar { display: none; }
+
+    .subj-pill {
+      white-space: nowrap;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-alt);
+      color: var(--text-sec);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .subj-pill.active {
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
+    }
+
+    .timer-cluster {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-shrink: 0;
+    }
+
+    .timer-box {
+      font-variant-numeric: tabular-nums;
+      background: var(--navy);
+      color: #f8fafc;
+      padding: 6px 11px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .timer-box.urgent { background: var(--rose); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 7px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover { background: var(--primary-hover); }
+
+    .btn-danger {
+      background: var(--rose);
+      color: #ffffff;
+      border: none;
+      padding: 8px 13px;
+      border-radius: 7px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-outline {
+      background: var(--surface);
+      color: var(--text-sec);
+      border: 1px solid var(--border-strong);
+      padding: 8px 12px;
+      border-radius: 7px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-outline:hover { background: var(--surface-alt); }
+
+    .question-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px 28px 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .question-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .q-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-bottom: 11px;
+      margin-bottom: 13px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .q-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      color: var(--text-sec);
+    }
+
+    .badge-subj {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: #99f6e4;
+    }
+
+    .badge-pyq {
+      background: var(--blue-light);
+      color: var(--blue);
+      border-color: #bfdbfe;
+    }
+
+    .badge-marks {
+      background: var(--surface-alt);
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .q-stem-en {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-main);
+      font-weight: 500;
+      white-space: pre-line;
+      margin-bottom: 10px;
+    }
+
+    .q-stem-ta {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #1e293b;
+      background: #f8fafc;
+      border-left: 3px solid #0d9488;
+      padding: 10px 13px;
+      border-radius: 0 6px 6px 0;
+      white-space: pre-line;
+      margin-bottom: 15px;
+    }
+
+    /* TOUCH-OPTIMIZED OMR OPTIONS */
+    .choices-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .choice-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-height: 50px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 9px;
+      background: var(--surface);
+      cursor: pointer;
+      transition: border-color 0.12s, background 0.12s;
+    }
+
+    .choice-row:hover {
+      border-color: var(--primary);
+      background: #f8fafc;
+    }
+
+    .choice-row.selected {
+      border-color: var(--omr-pink);
+      background: #fdf2f8;
+    }
+
+    .choice-row.correct-reveal {
+      border-color: var(--emerald);
+      background: var(--emerald-bg);
+    }
+
+    .choice-row.wrong-reveal {
+      border-color: var(--rose);
+      background: var(--rose-bg);
+    }
+
+    .omr-bubble {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid var(--omr-pink);
+      color: var(--omr-pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12.5px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .choice-row.selected .omr-bubble {
+      background: #111827;
+      border-color: #111827;
+      color: #ffffff;
+    }
+
+    .choice-row.correct-reveal .omr-bubble {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      color: #ffffff;
+    }
+
+    .choice-row.wrong-reveal .omr-bubble {
+      background: var(--rose);
+      border-color: var(--rose);
+      color: #ffffff;
+    }
+
+    .choice-texts { flex: 1; min-width: 0; }
+
+    .choice-en {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .choice-ta {
+      font-size: 13.5px;
+      color: var(--text-sec);
+      margin-top: 3px;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .q-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .q-actions-left, .q-actions-right {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .solution-panel {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #99f6e4;
+      background: #f0fdfa;
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+
+    .solution-panel h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+      color: var(--primary-hover);
+    }
+
+    .sol-block { margin-bottom: 10px; }
+
+    .trap-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-top: 10px;
+      font-size: 12.5px;
+    }
+
+    .mock-result-banner {
+      background: var(--navy);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      max-width: 880px;
+      margin: 0 auto 16px auto;
+      display: none;
+    }
+
+    .mock-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .res-stat {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+
+    .res-stat-label {
+      font-size: 10.5px;
+      color: #94a3b8;
+      text-transform: uppercase;
+    }
+
+    .res-stat-val {
+      font-size: 18px;
+      font-weight: 800;
+      margin-top: 3px;
+    }
+
+    /* RIGHT DOCKED GEMINI AI COACH */
+    .coach-sidebar {
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .coach-header {
+      padding: 11px 14px;
+      background: var(--navy-mid);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .coach-title { font-size: 13px; font-weight: 800; }
+    .coach-sub { font-size: 11px; color: #99f6e4; font-weight: 600; }
+
+    .coach-quick-chips {
+      display: flex;
+      gap: 6px;
+      padding: 9px 12px;
+      background: var(--surface-alt);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      flex-shrink: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .coach-quick-chips::-webkit-scrollbar { display: none; }
+
+    .chip-btn {
+      white-space: nowrap;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      color: var(--text-sec);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chip-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .coach-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #f8fafc;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .chat-msg {
+      padding: 10px 13px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      line-height: 1.65;
+      max-width: 94%;
+      min-width: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* MATH, FRACTIONS & CHEMICAL FORMULA RENDERING (MOBILE + DESKTOP) */
+    .math-inline {
+      display: inline;
+      max-width: 100%;
+    }
+
+    .math-inline .katex {
+      white-space: normal;
+      font-size: 1.04em;
+    }
+
+    .math-inline .katex .base {
+      display: inline-block;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      vertical-align: middle;
+      margin: 2px 0;
+    }
+
+    .math-block {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 7px 4px;
+      margin: 6px 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .math-block .katex-display {
+      margin: 0.25em 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .fb-frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: middle;
+      padding: 0 3px;
+      font-size: 0.92em;
+      line-height: 1.15;
+    }
+
+    .fb-frac .fb-num {
+      border-bottom: 1px solid currentColor;
+      padding: 0 2px 1px;
+    }
+
+    .fb-frac .fb-den {
+      padding: 1px 2px 0;
+    }
+
+    .chat-blockquote {
+      border-left: 3px solid var(--primary);
+      background: var(--surface-alt);
+      padding: 6px 10px;
+      margin: 6px 0;
+      border-radius: 0 6px 6px 0;
+      color: var(--text-sec);
+      font-size: 13px;
+    }
+
+    .chat-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .chat-msg.coach {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      align-self: flex-start;
+      color: var(--text-main);
+    }
+
+    .chat-msg.student {
+      background: var(--primary);
+      color: #ffffff;
+      align-self: flex-end;
+    }
+
+    .coach-input-area {
+      padding: 10px 12px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .coach-input {
+      flex: 1;
+      border: 1px solid var(--border-strong);
+      border-radius: 7px;
+      padding: 9px 11px;
+      font-size: 16px; /* Prevents iOS Safari auto-zoom on tap */
+      font-family: inherit;
+    }
+
+    /* SCORE TRACKER & GUIDE PAGES */
+    .page-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .page-container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .kpi-value {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-top: 5px;
+    }
+
+    .kpi-note {
+      font-size: 11.5px;
+      color: var(--text-sec);
+      margin-top: 4px;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-card h2 {
+      font-size: 15.5px;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .subj-bar-row { margin-bottom: 12px; }
+    .subj-bar-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .bar-track {
+      height: 10px;
+      background: var(--bg);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 999px;
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    table.data-table th, table.data-table td {
+      padding: 10px 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    table.data-table th {
+      background: var(--surface-alt);
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .mobile-attempt-cards {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .m-attempt-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--surface-alt);
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 12px;
+    }
+
+    .resource-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--surface-alt);
+    }
+
+    .resource-item h4 { font-size: 14px; color: var(--navy); margin-bottom: 5px; }
+    .resource-item p { font-size: 12.5px; color: var(--text-sec); line-height: 1.55; margin-bottom: 8px; }
+    .resource-link { font-size: 12px; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .resource-link:hover { text-decoration: underline; }
+
+    /* MOBILE BOTTOM APP NAVIGATION BAR */
+    .mobile-bottom-nav {
+      display: none;
+      flex-shrink: 0;
+      width: 100%;
+      height: calc(var(--mobile-nav-h) + env(safe-area-inset-bottom, 0px));
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      background: var(--navy);
+      border-top: 1px solid #1e293b;
+      z-index: 200;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .m-nav-btn {
+      flex: 1;
+      height: 100%;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      font-size: 10.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .m-nav-btn.active {
+      color: #5eead4;
+    }
+
+    .m-nav-btn svg {
+      width: 19px;
+      height: 19px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      padding: 14px;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal-card {
+      background: var(--surface);
+      border-radius: 12px;
+      max-width: 520px;
+      width: 100%;
+      max-height: 90dvh;
+      overflow-y: auto;
+      padding: 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-group { margin-bottom: 12px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-sec);
+      margin-bottom: 4px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 9px 10px;
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    /* TABLET & MOBILE RESPONSIVE BREAKPOINTS */
+    @media (max-width: 960px) {
+      header {
+        padding: calc(10px + env(safe-area-inset-top, 0px)) 10px 8px 10px;
+        gap: 6px;
+      }
+
+      .brand-full-text { display: none; }
+      .desktop-nav-tabs { display: none; }
+      .intro-btn-sub { display: none; }
+
+      .header-left {
+        width: 100% !important;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 6px;
+        min-width: 0;
+      }
+
+      #intro-video-btn {
+        background: linear-gradient(135deg, #0d9488, #0f766e) !important;
+        border: 1px solid #5eead4 !important;
+        color: #ffffff !important;
+        font-weight: 800 !important;
+        padding: 5px 9px !important;
+        font-size: 11.5px !important;
+        white-space: nowrap;
+        flex-shrink: 0;
+        box-shadow: 0 2px 8px rgba(20, 184, 166, 0.35);
+      }
+
+      #profile-pill-btn {
+        max-width: 120px;
+        min-width: 0;
+        flex-shrink: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 5px 8px;
+        font-size: 11px;
+      }
+
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+        gap: 6px;
+      }
+
+      #module-select {
+        flex: 1;
+        min-width: 130px;
+        max-width: none;
+        font-size: 12px;
+      }
+
+      #lang-select {
+        width: auto;
+        max-width: 135px;
+        font-size: 12px;
+      }
+
+      .workspace-layout {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Mobile pane switching inside workspace */
+      .omr-sidebar, .exam-main, .coach-sidebar {
+        display: none;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .workspace-layout[data-mobile-pane="question"] .exam-main { display: flex; }
+      .workspace-layout[data-mobile-pane="omr"] .omr-sidebar { display: flex; }
+      .workspace-layout[data-mobile-pane="coach"] .coach-sidebar { display: flex; }
+
+      .omr-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+      }
+
+      .omr-num-btn { height: 42px; font-size: 13px; }
+
+      .exam-toolbar {
+        padding: 8px 12px;
+      }
+
+      .question-scroll {
+        padding: 12px 12px 24px 12px;
+      }
+
+      .question-card {
+        padding: 14px 14px;
+      }
+
+      .q-stem-en { font-size: 14.5px; }
+      .q-stem-ta { font-size: 14px; padding: 9px 11px; }
+
+      .q-actions-bar {
+        gap: 8px;
+      }
+
+      .q-actions-left, .q-actions-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .q-actions-right button {
+        flex: 1;
+        padding: 10px 12px;
+      }
+
+      .desktop-attempts-table-wrap { display: none; }
+      .mobile-attempt-cards { display: flex; }
+
+      .page-scroll { padding: 14px; }
+
+      .mobile-bottom-nav { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <header>
+    <div class="header-left" style="width:auto;flex:1;justify-content:space-between;">
+      <div class="brand">
+        <span class="brand-badge">TN ICAI CA HUB</span>
+        <span class="brand-full-text">TAMIL NADU ICAI CA MASTERY HUB (FOUNDATION • INTER • FINAL)</span>
+      </div>
+
+      <div class="desktop-nav-tabs">
+        <button class="nav-tab active" data-view="workspace" onclick="switchView('workspace')">Exam & Coach Workspace</button>
+        <button class="nav-tab" data-view="pyq" onclick="switchView('pyq')">ICAI Past Papers, RTPs &amp; Case Scenarios</button>
+        <button class="nav-tab" data-view="tracker" onclick="switchView('tracker')">Score, 60% Exemption &amp; Aggregate Tracker</button>
+        <button class="nav-tab" data-view="guide" onclick="switchView('guide')">TN CA Guide, Public Institutes (TAHDCO/SIRC) &amp; YouTube</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:6px;min-width:0;flex-shrink:1;">
+        <button class="header-btn" onclick="openIntroVideoModal()" id="intro-video-btn" style="background:linear-gradient(135deg,#0d9488,#0f766e);border-color:#5eead4;color:#ffffff;font-weight:700;">&#9654; Intro Video<span class="intro-btn-sub"> (தமிழ் + EN)</span></button>
+        <button class="header-btn" onclick="openProfileModal()" id="profile-pill-btn">Profile</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <select id="module-select" class="header-select" onchange="loadSelectedModule(this.value)" title="Choose Mock Exam or Subject Practice"></select>
+      <select id="lang-select" class="header-select" onchange="setLanguageMode(this.value)" title="Question Booklet Language">
+        <option value="bilingual">EN + தமிழ்</option>
+        <option value="en">English Only</option>
+        <option value="ta">தமிழ் Primary</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- VIEW 1: EXAM & GEMINI COACH WORKSPACE -->
+  <section id="view-workspace" class="view-section active">
+    <div class="workspace-layout" id="workspace-layout" data-mobile-pane="question">
+
+      <!-- LEFT / MOBILE TAB 2: NTA OMR PALETTE -->
+      <aside class="omr-sidebar">
+        <div class="omr-header">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <h3 id="omr-mode-heading" style="margin:0;">ICAI Exam Question Grid</h3>
+            <button class="btn-danger" style="padding:5px 10px;font-size:11px;" onclick="submitCurrentExam()">Submit Paper</button>
+          </div>
+          <div class="omr-legend">
+            <span><i class="legend-dot" style="background:#047857"></i>Answered</span>
+            <span><i class="legend-dot" style="background:#b45309"></i>Review</span>
+            <span><i class="legend-dot" style="background:#cbd5e1"></i>Blank</span>
+            <span><i class="legend-dot" style="background:#be123c"></i>Wrong / Trap</span>
+          </div>
+        </div>
+        <div class="omr-grid-wrap">
+          <div id="omr-grid" class="omr-grid"></div>
+        </div>
+        <div class="omr-footer" id="omr-live-stats">
+          ICAI Rule: <strong>40%</strong> Paper Floor | <strong>50%</strong> Group Agg | <strong>60%+</strong> Exemption
+        </div>
+      </aside>
+
+      <!-- CENTER / MOBILE TAB 1: ACTIVE QUESTION & OMR CHOICES -->
+      <main class="exam-main">
+        <div class="exam-toolbar">
+          <div class="subject-pills" id="subject-pills"></div>
+          <div class="timer-cluster">
+            <div class="timer-box" id="exam-timer">80:00</div>
+            <button class="btn-outline" style="padding:6px 10px;font-size:11.5px;" onclick="startFreshAttempt()">New / Retake</button>
+            <button class="btn-danger" style="padding:6px 11px;font-size:11.5px;" id="submit-exam-btn" onclick="submitCurrentExam()">Submit Paper</button>
+          </div>
+        </div>
+
+        <div class="question-scroll" id="question-scroll">
+          <!-- Free 3-Question Preview Banner for Unregistered Visitors -->
+          <div id="free-preview-banner" style="display:none;max-width:840px;width:100%;margin:0 auto 12px auto;background:linear-gradient(135deg,#0f172a 0%,#134e4a 100%);color:#ffffff;padding:11px 16px;border-radius:10px;border:1px solid #14b8a6;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;box-shadow:var(--shadow-sm);">
+            <div style="font-size:12.5px;line-height:1.4;">
+              <strong style="color:#5eead4;">&#10024; Free Trial Preview (Questions 1–3 across Foundation, Inter &amp; Final):</strong> Try the first 3 ICAI questions below! Unlock all ICAI Past Papers, RTPs, Case Scenarios &amp; 24/7 Bilingual Gemini AI CA Coach for free.
+            </div>
+            <button type="button" onclick="openAccessGateModal('Unlock all ICAI CA Foundation, Intermediate, Final &amp; SPOM Questions, RTP/MTP Archive &amp; 24/7 Gemini AI CA Coach instantly — 100% free.')" style="background:#14b8a6;color:#0f172a;border:none;padding:7px 13px;border-radius:7px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;">
+              Get Free Student Pass (Instant) &rarr;
+            </button>
+          </div>
+
+          <!-- Post-submission scorecard banner -->
+          <div id="mock-result-banner" class="mock-result-banner"></div>
+
+          <!-- Question Card -->
+          <div class="question-card" id="question-card">
+            <div class="q-meta-row">
+              <div class="q-badges" id="q-badges"></div>
+              <span class="badge badge-marks" id="q-marking-badge">ICAI New Scheme</span>
+            </div>
+
+            <div id="q-stem-en" class="q-stem-en"></div>
+            <div id="q-stem-ta" class="q-stem-ta"></div>
+
+            <div id="choices-container" class="choices-list"></div>
+
+            <div class="q-actions-bar">
+              <div class="q-actions-left">
+                <button class="btn-outline" onclick="clearBubble()">Clear</button>
+                <button class="btn-outline" onclick="toggleMarkReview()" id="mark-review-btn">Review</button>
+                <button class="btn-primary" id="check-instant-btn" onclick="revealPracticeSolution()">Check Answer</button>
+                <button class="btn-outline" onclick="openMobileCoachForCurrentQ()" id="ask-coach-inline-btn" style="color:var(--primary);border-color:#99f6e4;background:var(--primary-light);">Ask Coach</button>
+              </div>
+              <div class="q-actions-right">
+                <button class="btn-outline" onclick="navQuestion(-1)">&larr; Prev</button>
+                <button class="btn-primary" onclick="navQuestion(1)">Next &rarr;</button>
+              </div>
+            </div>
+
+            <div id="solution-panel" class="solution-panel" style="display:none;"></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- RIGHT / MOBILE TAB 3: BILINGUAL GEMINI AI NEET COACH -->
+      <aside class="coach-sidebar">
+        <div class="coach-header">
+          <div>
+            <div class="coach-title">Gemini AI ICAI CA Coach</div>
+            <div class="coach-sub" id="coach-engine-status">Multilingual: English & தமிழ்</div>
+          </div>
+          <button class="header-btn" style="font-size:11px;padding:4px 8px;" onclick="clearCoachChat()">Clear</button>
+        </div>
+
+        <div class="coach-quick-chips">
+          <button class="chip-btn" onclick="askCoachPreset('Explain this question step-by-step with ICAI Working Note and Statutory Provision / AS / Ind AS / SA.')">Working Note &amp; Sec</button>
+          <button class="chip-btn" onclick="askCoachPreset('இந்த வினாவை தமிழில் எளிமையாக விளக்கவும் (Section / Standard உடன்).')">தமிழில் விளக்குக</button>
+          <button class="chip-btn" onclick="askCoachPreset('Why do the other options fail and what is the ICAI examiner trap here?')">Examiner Trap</button>
+          <button class="chip-btn" onclick="askCoachPreset('Give me the fastest ICAI Ranker memory hook for this Section / Standard and how to score 60%+ Exemption.')">60% Exemption Tip</button>
+          <button class="chip-btn" onclick="askCoachPreset('Give me 1 new ICAI RTP/MTP level Case-Scenario MCQ on this exact topic to test me.')">Similar Case MCQ</button>
+        </div>
+
+        <div class="coach-messages" id="coach-messages"></div>
+
+        <form class="coach-input-area" onsubmit="handleCoachSubmit(event)">
+          <input
+            type="text"
+            id="coach-input"
+            class="coach-input"
+            placeholder="Ask in English, தமிழ், or Tanglish..."
+            autocomplete="off"
+          />
+          <button type="submit" class="btn-primary" id="coach-send-btn">Ask</button>
+        </form>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- VIEW 1.5: 27-YEAR OFFICIAL PAST PAPERS, NCERT EXEMPLAR & COACHING ARCHIVE (2000–2026) -->
+  <section id="view-pyq" class="view-section">
+    <div class="page-scroll">
+      <div class="page-container">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+          <div>
+            <h1 style="font-size:19px;color:var(--navy);">Official ICAI Past Exam Papers, RTPs (Revision Test Papers), MTPs &amp; Case-Scenario Archive (2019–2026)</h1>
+            <p style="font-size:12.5px;color:var(--text-sec);margin-top:3px;">
+              Covers all <strong>3 Student Groups/Levels</strong> under the <strong>ICAI New Scheme</strong>: <strong>Level 1 CA Foundation</strong> (Papers 1–4), <strong>Level 2 CA Intermediate Group I &amp; II</strong> (Papers 1–6), and <strong>Level 3 CA Final Group I &amp; II + Mandatory SPOM Sets A–D &amp; Open-Book IBS</strong>.
+            </p>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn-outline" onclick="loadSelectedModule('ca_foundation_mock_1'); switchMobilePane('question');">Level 1: CA Foundation Mock</button>
+            <button class="btn-outline" onclick="loadSelectedModule('ca_inter_g1_mock'); switchMobilePane('question');">Level 2: CA Inter G1 Mock</button>
+            <button class="btn-primary" onclick="loadSelectedModule('ca_final_spom_mock'); switchMobilePane('question');">Level 3: CA Final &amp; SPOM Mock</button>
+          </div>
+        </div>
+
+        <div class="kpi-grid" id="pyq-overview-kpis"></div>
+
+        <div class="section-card">
+          <h2>1. ICAI Level-Wise Mocks, RTP/MTP Capsules, Finance Act Amendments &amp; Landmark Case Laws</h2>
+          <p style="font-size:12.5px;color:var(--text-sec);margin-bottom:12px;">
+            Practice dedicated modules for <strong>Group 1: CA Foundation (Papers 1–4 with -0.25 negative marking)</strong>, <strong>Group 2: CA Intermediate (Group I &amp; II 30% Case-Scenario MCQs)</strong>, <strong>Group 3: CA Final (Group I &amp; II + Paper 6 Open-Book IBS + SPOM Sets A–D)</strong>, <strong>Income Tax Sec 115BAC (AY 2026-27) &amp; CGST Sec 16/17</strong>, and <strong>Landmark Corporate/Contract Case Laws</strong>.
+          </p>
+          <div class="resource-grid" id="pyq-sprint-cards"></div>
+        </div>
+
+        <div class="section-card">
+          <h2>2. Launch ICAI Past Exam Cycles, RTPs (Revision Test Papers) &amp; MTPs (2019–2026)</h2>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+            <button class="subj-pill active" id="pyq-filter-all" onclick="filterPyqPaperCards('all')">All ICAI Papers &amp; RTPs</button>
+            <button class="subj-pill" id="pyq-filter-recent" onclick="filterPyqPaperCards('recent')">2024–2026 ICAI New Scheme</button>
+            <button class="subj-pill" id="pyq-filter-ta" onclick="filterPyqPaperCards('ta')">Bilingual தமிழ் + EN Concept Booklets</button>
+            <button class="subj-pill" id="pyq-filter-classic" onclick="filterPyqPaperCards('classic')">2019–2023 ICAI Past Cycles</button>
+            <button class="subj-pill" id="pyq-filter-aipmt" onclick="filterPyqPaperCards('aipmt')">RTP / MTP &amp; SPOM Specials</button>
+          </div>
+          <div class="resource-grid" id="pyq-paper-cards"></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;">
+          <div class="section-card">
+            <h2>3. ICAI Question-Format Distribution by Cycle (2019–2026)</h2>
+            <p style="font-size:12px;color:var(--text-sec);margin-bottom:10px;">
+              Notice how <strong>Match List-I &amp; II</strong>, <strong>Statement I &amp; II</strong>, and <strong>Assertion–Reason</strong> questions surged from 2022–2026 to act as time-sinks.
+            </p>
+            <div style="overflow-x:auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Exam Year</th>
+                    <th>Clean PYQs</th>
+                    <th>Direct</th>
+                    <th>Numerical</th>
+                    <th>Match List</th>
+                    <th>Stmt I/II</th>
+                    <th>A–R</th>
+                  </tr>
+                </thead>
+                <tbody id="pyq-year-format-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <h2>4. Highest-Weightage ICAI Chapters across All 3 Levels</h2>
+            <p style="font-size:12px;color:var(--text-sec);margin-bottom:10px;">
+              Top recurring ICAI BoS chapters across CA Foundation, CA Intermediate (G1 &amp; G2), and CA Final &amp; SPOM.
+            </p>
+            <div id="pyq-top-chapters-wrap"></div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>5. Verified ICAI Examiner Dossier: Finance Act Amendments, 60% Exemption Rules &amp; High-Failure Traps</h2>
+          <p style="font-size:12.5px;color:var(--text-sec);margin-bottom:12px;">
+            Every CA student must master how ICAI examiners test Finance Act default tax regime switches (Sec 115BAC), CGST Sec 17(5) blocked credit exceptions, Companies Act exemptions, and the 40% Paper Floor vs 50% Group Aggregate rule.
+          </p>
+          <div class="resource-grid" id="pyq-disputed-dossier-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 2: STUDENT & MENTOR SCORE TRACKER -->
+  <section id="view-tracker" class="view-section">
+    <div class="page-scroll">
+      <div class="page-container">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px;">
+          <div>
+            <h1 style="font-size:19px;color:var(--navy);">ICAI CA Score, 60% Exemption &amp; 50% Aggregate Tracker</h1>
+            <p style="font-size:12.5px;color:var(--text-sec);margin-top:3px;">
+              Tracks every Mock & Practice test automatically on your phone/browser and syncs with the Mentor Score Ledger.
+            </p>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn-outline" onclick="copyWhatsAppScoreReport()" id="copy-report-btn">Copy WhatsApp Report</button>
+            <button class="btn-primary" onclick="loadSelectedModule('mistake_bank'); switchMobilePane('question');">Practice Mistake Bank</button>
+          </div>
+        </div>
+
+        <div class="kpi-grid" id="tracker-kpis"></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;">
+          <div class="section-card">
+            <h2>ICAI Percentage Score Trend (40% Pass • 50% Agg • 60% Exemption)</h2>
+            <div id="score-trend-svg" style="height:180px;display:flex;align-items:flex-end;gap:8px;padding-top:16px;"></div>
+          </div>
+
+          <div class="section-card">
+            <h2>Level-Wise Mastery (Foundation • Inter G1 • Inter G2 • Final &amp; SPOM)</h2>
+            <div id="subject-mastery-bars"></div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>Complete Mock & Practice Attempt Ledger</h2>
+          <div class="desktop-attempts-table-wrap" style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date / Time</th>
+                  <th>Student</th>
+                  <th>Paper / Module</th>
+                  <th>Raw Score</th>
+                  <th>Score % (ICAI)</th>
+                  <th>C / W / Blank</th>
+                  <th>Neg Lost</th>
+                  <th>ICAI Pass / 50% Aggregate / 60% Exemption Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="attempts-table-body"></tbody>
+            </table>
+          </div>
+          <div id="mobile-attempt-cards" class="mobile-attempt-cards"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 3: TAMIL NADU ICAI CA 3-GROUP GUIDE, PUBLIC INSTITUTES (TAHDCO, NAAN MUDHALVAN, SIRC) & YOUTUBE HUB -->
+  <section id="view-guide" class="view-section">
+    <div class="page-scroll">
+      <div class="page-container">
+
+        <div class="section-card">
+          <h2>1. The 3 Student Groups / Levels in ICAI Chartered Accountancy (New Scheme 2024–2026)</h2>
+          <p style="font-size:13px;color:var(--text-sec);line-height:1.65;margin-bottom:14px;">
+            Under the <strong>ICAI New Scheme of Education and Training</strong>, students preparing for Chartered Accountancy fall into <strong>three distinct student groups/levels</strong>. Every level requires <strong>minimum 40% marks in each individual paper</strong> AND <strong>minimum 50% aggregate marks across the Group</strong>. Scoring <strong>60% or more in any paper earns an automatic 3-Attempt Exemption</strong> in that paper!
+          </p>
+          <div style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Student Group / Level</th>
+                  <th>Who Takes It &amp; Entry Route</th>
+                  <th>Papers &amp; Syllabus Structure</th>
+                  <th>Exam Pattern, Negative Marking &amp; Passing Criteria</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Group / Level 1:<br>CA Foundation</strong><br><span style="font-size:11px;color:var(--primary);font-weight:700;">(Jan / May / Sep — 3x/Year)</span></td>
+                  <td><strong>Class 12 Students &amp; Pass-outs</strong> (Samacheer Kalvi Commerce or Science stream, CBSE, ISC). Provisional registration allowed after Class 10.</td>
+                  <td>
+                    <strong>4 Papers (400 Marks):</strong><br>
+                    • <strong>Paper 1:</strong> Accounting (100M)<br>
+                    • <strong>Paper 2:</strong> Business Laws (100M — Contract, Sale of Goods, Partnership, LLP, Companies Act, NI Act)<br>
+                    • <strong>Paper 3:</strong> Quantitative Aptitude — Maths, LR &amp; Statistics (100M)<br>
+                    • <strong>Paper 4:</strong> Business Economics (100M)
+                  </td>
+                  <td>
+                    • <strong>Papers 1 &amp; 2:</strong> Descriptive (0 Negative)<br>
+                    • <strong>Papers 3 &amp; 4:</strong> 100% MCQ with <strong>+1 Correct &amp; -0.25 Negative Marking</strong><br>
+                    • <strong>Pass Rule:</strong> <strong>40%+</strong> in each paper AND <strong>50%+ Aggregate (200/400)</strong>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Group / Level 2:<br>CA Intermediate<br>(Group I &amp; Group II)</strong><br><span style="font-size:11px;color:var(--primary);font-weight:700;">(Jan / May / Sep — 3x/Year)</span></td>
+                  <td>
+                    <strong>Route A (Foundation Route):</strong> Cleared CA Foundation.<br>
+                    <strong>Route B (Direct Entry):</strong> Commerce Graduates/PG with <strong>&ge;55%</strong> (Non-Commerce Graduates with <strong>&ge;60%</strong>, or CS/CMA Inter pass) — <strong>100% Exempt from CA Foundation!</strong>
+                  </td>
+                  <td>
+                    <strong>6 Papers across 2 Groups (600 Marks):</strong><br>
+                    <strong>Group I (300M):</strong><br>
+                    • <strong>P1:</strong> Advanced Accounting (AS &amp; Co. Accounts)<br>
+                    • <strong>P2:</strong> Corporate &amp; Other Laws (Companies Act Sec 1–148, LLP, FEMA)<br>
+                    • <strong>P3:</strong> Taxation (Income Tax 50M + GST 50M)<br>
+                    <strong>Group II (300M):</strong><br>
+                    • <strong>P4:</strong> Cost &amp; Management Accounting<br>
+                    • <strong>P5:</strong> Auditing &amp; Ethics (SAs, CARO 2020)<br>
+                    • <strong>P6:</strong> Financial Mgmt (50M) &amp; Strategic Mgmt (50M)
+                  </td>
+                  <td>
+                    • <strong>All 6 Papers:</strong> <strong>30% Compulsory Case-Scenario MCQs (0 Negative Marking!)</strong> + <strong>70% Descriptive</strong>.<br>
+                    • <strong>Pass Rule:</strong> <strong>40%+ per paper</strong> + <strong>50%+ Group Aggregate</strong> (150/300 per group or 300/600 both groups with set-off).<br>
+                    • <strong>Exemption:</strong> <strong>60%+</strong> in any paper exempts that paper for 3 attempts!
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Group / Level 3:<br>CA Final (Group I &amp; II)<br>+ Mandatory SPOM (Sets A–D)</strong><br><span style="font-size:11px;color:var(--primary);font-weight:700;">(May / Nov — 2x/Year)</span></td>
+                  <td><strong>Articleship &amp; Final Students:</strong> Cleared both groups of CA Inter, completed <strong>2 Years Practical Articleship</strong> + AICITSS, and cleared <strong>Self-Paced Online Modules (SPOM Sets A, B, C &amp; D)</strong>.</td>
+                  <td>
+                    <strong>SPOM (CBT Online MCQ, 100M each):</strong><br>
+                    • <strong>Set A:</strong> Corporate &amp; Economic Laws (IBC, SEBI, FEMA, PMLA)<br>
+                    • <strong>Set B:</strong> Strategic Cost Mgmt (SCMPE)<br>
+                    • <strong>Sets C &amp; D:</strong> Elective &amp; Multidisciplinary<br>
+                    <strong>CA Final (6 Papers, 600M):</strong><br>
+                    • <strong>G1:</strong> P1 Financial Reporting (Ind AS), P2 Adv. Financial Mgmt (AFM), P3 Adv. Auditing &amp; Ethics<br>
+                    • <strong>G2:</strong> P4 Direct Tax &amp; Intl Tax, P5 Indirect Tax (GST &amp; Customs), <strong>P6 Integrated Business Solutions (IBS — Open Book)</strong>
+                  </td>
+                  <td>
+                    • <strong>SPOM Sets A–D:</strong> 100M Computer-Based MCQ, <strong>50% to Pass, 0 Negative Marking</strong>.<br>
+                    • <strong>Final Papers 1–6:</strong> <strong>30% Case-Scenario MCQs (0 Negative)</strong> + <strong>70% Descriptive</strong>.<br>
+                    • <strong>Paper 6 (IBS):</strong> 4-Hour <strong>Open-Book</strong> Multidisciplinary Case Study (40% MCQ + 60% Descriptive).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>2. Public &amp; Government Free CA Coaching Institutes &amp; Scholarships in Tamil Nadu</h2>
+          <p style="font-size:13px;color:var(--text-sec);line-height:1.65;margin-bottom:14px;">
+            Students in Tamil Nadu who cannot afford private coaching fees (&#8377;45,000–&#8377;1,20,000) can access <strong>100% Free or Heavily Subsidized Public/Government Coaching &amp; Monthly Scholarships</strong> through the Government of Tamil Nadu and ICAI:
+          </p>
+          <div class="resource-grid">
+            <div class="resource-item">
+              <div style="font-size:10.5px;font-weight:800;color:var(--primary);margin-bottom:4px;">GOVT OF TAMIL NADU • 100% FREE COACHING</div>
+              <h4>1. TAHDCO Free CA / CS / CMA Coaching Scheme</h4>
+              <p><strong>Tamil Nadu Adi Dravidar Housing &amp; Development Corporation (TAHDCO)</strong> provides <strong>100% Free CA Foundation &amp; CA Intermediate Coaching</strong>, study materials, and fee support for eligible SC/ST students across Tamil Nadu (family income &le; &#8377;2.5–3.0L).</p>
+              <a class="resource-link" href="https://tahdco.com" target="_blank" rel="noopener">Open Official TAHDCO Portal (tahdco.com) &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <div style="font-size:10.5px;font-weight:800;color:var(--primary);margin-bottom:4px;">GOVT OF TAMIL NADU • COLLEGE COMMERCE &amp; BFSI</div>
+              <h4>2. Naan Mudhalvan Scheme (TNSDC — Govt &amp; Aided Colleges)</h4>
+              <p>Tamil Nadu Government's flagship skill &amp; competitive exam initiative across Govt &amp; Aided Arts &amp; Science Colleges (B.Com/BBA), providing BFSI, GST, Corporate Accounting, and Audit tracks for <strong>CA Direct Entry Route</strong> aspirants.</p>
+              <a class="resource-link" href="https://www.naanmudhalvan.tn.gov.in" target="_blank" rel="noopener">Open Naan Mudhalvan Portal &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <div style="font-size:10.5px;font-weight:800;color:var(--primary);margin-bottom:4px;">STATUTORY PUBLIC BODY • 100% FREE LIVE CLASSES</div>
+              <h4>3. ICAI Board of Studies (BoS) Free Live Learning &amp; SSP Scholarships</h4>
+              <p>ICAI provides <strong>100% Free Live Virtual Classes</strong> for every Foundation, Inter &amp; Final paper via <strong>BoS Live / ICAI CA Tube</strong>, plus <strong>Need-Based SSP Scholarships (&#8377;1,500–&#8377;5,000/month)</strong> for students with parental income &le; &#8377;3–5 Lakhs.</p>
+              <a class="resource-link" href="https://boslive.icai.org" target="_blank" rel="noopener">Open ICAI BoS Live &amp; SSP Portal &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <div style="font-size:10.5px;font-weight:800;color:var(--primary);margin-bottom:4px;">PUBLIC CHARITABLE TRUST • CHENNAI / TN</div>
+              <h4>4. Anandam Charitable Trust &amp; RPCT Free CA Coaching (Chennai)</h4>
+              <p><strong>Anandam Charitable Trust</strong> and <strong>Ramanathan Public Charitable Trust (RPCT)</strong> in Chennai offer <strong>100% Free CA Coaching, ICAI registration fee sponsorship, books, and mentorship</strong> for meritorious Govt/Corporation school students.</p>
+              <a class="resource-link" href="https://anandamtrust.org" target="_blank" rel="noopener">Open Anandam Charitable Trust &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>3. Official SIRC of ICAI Headquarters (Chennai) &amp; All 12+ Tamil Nadu District Branches</h2>
+          <p style="font-size:13px;color:var(--text-sec);line-height:1.65;margin-bottom:14px;">
+            The <strong>Southern India Regional Council (SIRC) of ICAI</strong> is the statutory public body governing CA education across South India. Every Tamil Nadu district branch listed below offers <strong>Subsidized Public Oral Coaching, AC Student Reading Rooms/Libraries, Official BoS Study Material Counters, ICITSS/AICITSS Computer &amp; Orientation Labs, and Physical Mock Test Centers</strong>:
+          </p>
+          <div style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>SIRC / ICAI Branch</th>
+                  <th>Official Address &amp; Location</th>
+                  <th>Student Services &amp; Public Facilities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. Chennai — SIRC HQ</strong></td>
+                  <td><strong>ICAI Bhawan</strong>, 122, Mahatma Gandhi Road (Nungambakkam High Road), Chennai – 600 034 (<a class="resource-link" href="https://sirc-icai.org" target="_blank" rel="noopener">sirc-icai.org</a>)</td>
+                  <td>Regional Headquarters, AC Reading Libraries, BoS Publication Counter, Oral Coaching Classes, ICITSS/AICITSS Labs, Articleship Placement Cell.</td>
+                </tr>
+                <tr>
+                  <td><strong>2. Coimbatore Branch</strong></td>
+                  <td>ICAI Bhawan, Race Course / Thudiyalur Main Road, Kurudampalayam, Coimbatore – 641 017 / 641 034 (<a class="resource-link" href="https://coimbatore-icai.org" target="_blank" rel="noopener">coimbatore-icai.org</a>)</td>
+                  <td>Western TN Hub — Foundation/Inter Oral Coaching, Student Reading Library, IT &amp; Orientation Batches, Mock Test Center.</td>
+                </tr>
+                <tr>
+                  <td><strong>3. Madurai Branch</strong></td>
+                  <td>ICAI Bhawan, No. 30, P.T.R. Road / Visalakshipuram 2nd Street, Narimedu, Madurai – 625 002 / 625 014 (<a class="resource-link" href="https://madurai-icai.org" target="_blank" rel="noopener">madurai-icai.org</a>)</td>
+                  <td>Southern TN Hub — Student Reading Room, Coaching Batches, ICITSS/AICITSS Labs, Physical MTP Exams.</td>
+                </tr>
+                <tr>
+                  <td><strong>4. Tiruchirappalli (Trichy)</strong></td>
+                  <td>ICAI Bhawan, No. 24, SBI Officers Colony, Lawsons Road, Cantonment, Tiruchirappalli – 620 001</td>
+                  <td>Central TN Hub — Student Library, Orientation &amp; IT Training, Foundation/Inter Study Circle.</td>
+                </tr>
+                <tr>
+                  <td><strong>5. Salem Branch</strong></td>
+                  <td>ICAI Bhawan, 66, Ramakrishna Road, Hasthampatti, Salem – 636 007</td>
+                  <td>Salem / Namakkal / Dharmapuri Hub — IT Labs, Student Library, Mock Test Series.</td>
+                </tr>
+                <tr>
+                  <td><strong>6. Erode Branch</strong></td>
+                  <td>ICAI Bhawan, Perundurai Road / Mettukadai, Erode – 638 107</td>
+                  <td>Erode Commerce Belt — ICITSS/AICITSS Computer Labs, Reading Room &amp; Coaching.</td>
+                </tr>
+                <tr>
+                  <td><strong>7. Tirupur Branch</strong></td>
+                  <td>ICAI Bhawan, No. 46, P.N. Road, Tirupur – 641 602</td>
+                  <td>Export &amp; Textile GST/Forex Articleship Hub — Student Library, IT Labs &amp; MTP Center.</td>
+                </tr>
+                <tr>
+                  <td><strong>8. Tirunelveli Branch</strong></td>
+                  <td>ICAI Bhawan, Palayamkottai / Vannarpettai, Tirunelveli – 627 002</td>
+                  <td>Tirunelveli / Kanyakumari / Tenkasi Hub — Student Library, Orientation &amp; IT Training.</td>
+                </tr>
+                <tr>
+                  <td><strong>9. Vellore Branch</strong></td>
+                  <td>ICAI Bhawan, Katpadi / Gandhi Nagar, Vellore – 632 006</td>
+                  <td>Northern TN Hub (Vellore / Ranipet / Tiruvannamalai) — Study Material &amp; Training Center.</td>
+                </tr>
+                <tr>
+                  <td><strong>10. Kumbakonam Branch</strong></td>
+                  <td>ICAI Bhawan, No. 23, Pachayappa Street, Kumbakonam – 612 001</td>
+                  <td>Cauvery Delta Hub (Thanjavur / Kumbakonam / Tiruvarur / Nagapattinam) — Library &amp; Training.</td>
+                </tr>
+                <tr>
+                  <td><strong>11. Sivakasi Branch</strong></td>
+                  <td>ICAI Bhawan, Velayutham Road, Sivakasi – 626 123</td>
+                  <td>Virudhunagar District Hub — Student Reading Room, Coaching &amp; MTP Center.</td>
+                </tr>
+                <tr>
+                  <td><strong>12. Tuticorin (Thoothukudi)</strong></td>
+                  <td>ICAI Bhawan, Ettayapuram Road, Thoothukudi – 628 002</td>
+                  <td>Port &amp; Customs/GST Hub — Student Library &amp; ICITSS Center.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>4. Verified Tamil + English CA YouTube Channels &amp; Top Tamil Nadu Academies</h2>
+          <div class="resource-grid">
+            <div class="resource-item">
+              <h4>CA in Tamil (@CAinTamil)</h4>
+              <p>Dedicated Tamil explanations for <strong>CA Intermediate Direct Tax (Income Tax AY 2026-27), GST, Corporate &amp; Other Laws (Companies Act 2013), and RTP/MTP Amendments</strong>.</p>
+              <a class="resource-link" href="https://www.youtube.com/@CAinTamil" target="_blank" rel="noopener">Open @CAinTamil &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <h4>ICAI CA Tube (Official ICAI BoS Channel)</h4>
+              <p>Official Board of Studies channel streaming <strong>100% free live revision marathons, Case Scenario discussions, and RTP/MTP solving sessions</strong> across Foundation, Inter &amp; Final.</p>
+              <a class="resource-link" href="https://www.youtube.com/@icai_ca_tube" target="_blank" rel="noopener">Open @icai_ca_tube &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <h4>KPG Classes Tamil (@KPGClasses)</h4>
+              <p>Bilingual Tamil + English lectures covering <strong>CA Foundation Business Economics &amp; Business Laws</strong> and <strong>CA Intermediate Auditing &amp; Strategic Management</strong>.</p>
+              <a class="resource-link" href="https://www.youtube.com/@KPGClasses" target="_blank" rel="noopener">Open @KPGClasses &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <h4>Learn with JJ / Tamil Accounting &amp; Costing</h4>
+              <p>Clear Tamil step-by-step working notes for <strong>Accounting, Advanced Accounting, Cost &amp; Management Accounting (Marginal, Standard, Process), and Financial Management</strong>.</p>
+              <a class="resource-link" href="https://www.youtube.com/@LearnwithJJ" target="_blank" rel="noopener">Open @LearnwithJJ &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <h4>Audit Raza — CA Inter &amp; Final Tamil</h4>
+              <p>Standards on Auditing (<strong>SA 200 to SA 720</strong>), <strong>CARO 2020</strong> clauses, and Professional Ethics schedules explained in Tamil with keyword memory hooks.</p>
+              <a class="resource-link" href="https://www.youtube.com/results?search_query=CA+Inter+Audit+Tamil" target="_blank" rel="noopener">Open CA Audit Tamil &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <h4>Top Private TN Academies (Reference &amp; Test Series)</h4>
+              <p><strong>KS Academy (KSA)</strong> (Chennai, Coimbatore, Trichy), <strong>Srinivasa Academy</strong> (Chennai), <strong>Yeshas / JK Shah</strong>, and <strong>Sree Atchayaa / Padmarajam</strong> (Madurai).</p>
+              <a class="resource-link" href="https://sirc-icai.org" target="_blank" rel="noopener">Compare with SIRC Public Coaching &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE BOTTOM APP BAR -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <button class="m-nav-btn active" data-mnav="question" onclick="switchMobilePane('question')">
+      <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <span>Question</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="omr" onclick="switchMobilePane('omr')">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span id="mnav-omr-label">Q Grid</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="coach" onclick="switchMobilePane('coach')">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>AI Coach</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="pyq" onclick="switchMobilePane('pyq')">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>RTP/PYQs</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="tracker" onclick="switchMobilePane('tracker')">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Scores</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="guide" onclick="switchMobilePane('guide')">
+      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>CA Guide</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="video" onclick="openIntroVideoModal()" style="color:#5eead4;">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+      <span>Video</span>
+    </button>
+  </nav>
+
+  <!-- STUDENT PROFILE & SETTINGS MODAL -->
+  <div class="modal-backdrop" id="profile-modal">
+    <div class="modal-card">
+      <h3 style="font-size:16.5px;color:var(--navy);margin-bottom:6px;">CA Student Profile &amp; ICAI Level Settings</h3>
+      <p style="font-size:12.5px;color:var(--text-sec);margin-bottom:14px;">
+        Personalizes your 40% Paper Floor / 50% Group Aggregate / 60% Exemption tracker, SIRC Branch, and Bilingual Gemini AI CA Coach.
+      </p>
+      <div class="form-group">
+        <label>Student Name</label>
+        <input type="text" id="prof-name" class="form-control" placeholder="e.g., Karthik / Divya" />
+      </div>
+      <div class="form-group">
+        <label>Tamil Nadu District / SIRC Branch</label>
+        <input type="text" id="prof-district" class="form-control" placeholder="e.g., Chennai, Coimbatore, Madurai, Trichy, Salem" />
+      </div>
+      <div class="form-group">
+        <label>Current ICAI CA Level / Student Group</label>
+        <select id="prof-board" class="form-control">
+          <option value="Level 1: CA Foundation (After Class 12)">Group / Level 1: CA Foundation (4 Papers)</option>
+          <option value="Level 2: CA Intermediate (Group I & II)">Group / Level 2: CA Intermediate (Group I &amp; II — 6 Papers)</option>
+          <option value="Level 2: CA Intermediate (Direct Entry Graduate)">Group / Level 2: CA Intermediate (Direct Entry Route)</option>
+          <option value="Level 3: CA Final & SPOM Sets A-D">Group / Level 3: CA Final (Group I &amp; II + IBS + SPOM Sets A–D)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Coaching / Scholarship Track</label>
+        <select id="prof-quota" class="form-control">
+          <option value="ICAI BoS Free Live + Self Study">ICAI BoS Free Live Classes + Self Study</option>
+          <option value="TAHDCO Free CA Coaching (Govt of TN)">TAHDCO Free CA Coaching Scheme (Govt of TN)</option>
+          <option value="Naan Mudhalvan / Govt Aided College Commerce">Naan Mudhalvan / TN Govt &amp; Aided College Track</option>
+          <option value="ICAI SSP Need / Merit Scholarship">ICAI SSP Need / Merit Scholarship (&le; &#8377;3–5L Income)</option>
+          <option value="SIRC Branch Oral Coaching / Private Academy">SIRC Branch Oral Coaching / Private Academy</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Target Score Percentage (60%+ = ICAI Exemption!)</label>
+        <input type="number" id="prof-target" class="form-control" min="40" max="100" value="65" />
+      </div>
+      <div class="form-group">
+        <label>Optional Google Gemini API Key (For direct serverless Gemini on phone)</label>
+        <input type="password" id="prof-gemini-key" class="form-control" placeholder="Optional AIza... key (saved only on this device)" />
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:16px;flex-wrap:wrap;">
+        <button type="button" class="btn-outline" style="color:var(--rose);border-color:#fecdd3;font-size:12px;" onclick="logoutStudentAccess()">Sign Out / Switch Access Code</button>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-outline" onclick="closeProfileModal()">Cancel</button>
+          <button class="btn-primary" onclick="saveProfile()">Save Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRODUCTORY EXPLAINER VIDEO MODAL (TAMIL VOICEOVER + ENGLISH SUBTITLES) -->
+  <div class="modal-backdrop" id="intro-video-modal" onclick="if(event.target===this) closeIntroVideoModal()">
+    <div class="modal-card" style="max-width:920px;width:96%;padding:18px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;">
+        <div>
+          <h3 style="margin:0;color:var(--navy);font-size:17px;">Platform Walkthrough &amp; Study System Guide (தமிழ் Voiceover + English Subtitles)</h3>
+          <p style="font-size:12px;color:var(--text-sec);margin-top:3px;">
+            Complete tour of all 4 tabs: ICAI 3-Level Workspace (Foundation, Inter G1/G2, Final &amp; SPOM), Statutory &amp; Working Note Solutions, 24/7 Bilingual Gemini AI CA Coach, RTP/MTP Past Paper Archive, and Public Institutes (TAHDCO, Naan Mudhalvan, SIRC Branches).
+          </p>
+        </div>
+        <button class="btn-outline" style="padding:5px 10px;font-size:12px;" onclick="closeIntroVideoModal()">Close</button>
+      </div>
+      <div id="intro-video-container" style="position:relative;width:100%;border-radius:10px;overflow:hidden;background:#070d19;border:1px solid var(--border);">
+        <iframe id="intro-youtube-iframe" style="display:block;width:100%;aspect-ratio:16/9;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <video id="intro-explainer-player" controls preload="metadata" style="width:100%;max-height:70vh;display:none;">
+          <source src="video/tamil_nadu_neet_explainer.mp4" type="video/mp4" />
+          <track label="English Subtitles" kind="subtitles" srclang="en" src="video/tamil_nadu_neet_explainer_en.vtt" default />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:12px;font-size:12px;color:var(--text-sec);">
+        <div>
+          <strong>Audio:</strong> தமிழ் (Spoken Tamil Walkthrough) &nbsp;|&nbsp; <strong>Subtitles:</strong> Burned-in English + CC Track
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <a href="https://youtu.be/ChJSZgvqAuY" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none;padding:6px 12px;font-size:12px;background:#dc2626;border-color:#dc2626;color:#fff;">Open on YouTube &rarr;</a>
+          <button type="button" id="toggle-video-source-btn" class="btn-outline" style="padding:6px 12px;font-size:12px;" onclick="toggleIntroVideoPlayerSource()">Use Built-in MP4 Player</button>
+          <a href="video/tamil_nadu_neet_explainer.mp4" download="Tamil_Nadu_NEET_720_Mastery_Explainer.mp4" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download MP4</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIRST-TIME STUDENT ACCESS CODE GATE & REQUEST MODAL -->
+  <div class="modal-backdrop" id="access-gate-modal" style="z-index:120;background:rgba(15,23,42,0.86);backdrop-filter:blur(6px);" onclick="if(event.target===this) closeAccessGateToPreview()">
+    <div class="modal-card" style="max-width:520px;width:95%;padding:22px;border:1px solid #cbd5e1;">
+      <div style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#ffffff;padding:14px 16px;border-radius:10px;margin-bottom:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span style="background:var(--primary);color:#fff;font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:0.6px;">100% FREE STUDENT PASS • INSTANT UNLOCK</span>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button type="button" onclick="openIntroVideoModal()" style="background:rgba(13,148,136,0.28);border:1px solid #14b8a6;color:#5eead4;font-size:11px;font-weight:800;padding:4px 9px;border-radius:6px;cursor:pointer;">
+              &#9654; Intro Video
+            </button>
+            <button type="button" onclick="closeAccessGateToPreview()" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#e2e8f0;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;cursor:pointer;" title="Return to 3-Question Free Preview">
+              &#10005; Preview Q.1–3
+            </button>
+          </div>
+        </div>
+        <h3 style="margin:8px 0 3px 0;font-size:17px;color:#ffffff;">Unlock All ICAI CA Levels, RTP/MTP Archive &amp; AI Coach</h3>
+        <p id="gate-context-msg" style="margin:0;font-size:12px;color:#cbd5e1;line-height:1.45;">
+          Enter your Name &amp; Email below to unlock all 3 ICAI Levels (Foundation, Intermediate, Final &amp; SPOM) + 24/7 Bilingual (தமிழ் + English) Gemini AI CA Coach immediately.
+        </p>
+      </div>
+
+      <!-- Mode Switcher Tabs (Default: New Here? Get Free Pass) -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f1f5f9;padding:4px;border-radius:8px;margin-bottom:14px;">
+        <button type="button" id="gate-tab-req-btn" onclick="switchAccessGateTab('request')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:800;cursor:pointer;background:#0f766e;color:#ffffff;">
+          New Here? Get Free Pass
+        </button>
+        <button type="button" id="gate-tab-code-btn" onclick="switchAccessGateTab('code')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:700;cursor:pointer;background:transparent;color:#334155;">
+          Already Registered? Sign In
+        </button>
+      </div>
+
+      <!-- TAB 1 (DEFAULT): INSTANT FREE STUDENT PASS REGISTRATION -->
+      <div id="gate-pane-request">
+        <div class="form-group">
+          <label>Your Full Name *</label>
+          <input type="text" id="req-name" class="form-control" placeholder="e.g., Kavin Kumar" onkeydown="if(event.key==='Enter') submitFirstTimeAccessRequest()" />
+        </div>
+        <div class="form-group">
+          <label>Your Email Address * (Unlocks immediately &amp; emails your backup pass)</label>
+          <input type="email" id="req-email" class="form-control" placeholder="e.g., student@gmail.com" onkeydown="if(event.key==='Enter') submitFirstTimeAccessRequest()" />
+        </div>
+        <div class="form-group">
+          <label>I am a *</label>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;" id="req-role-pills">
+            <button type="button" class="role-pill-btn" data-role="Group 1: CA Foundation Student" onclick="selectGateRolePill(this)" style="padding:7px 8px;font-size:11.5px;font-weight:800;border-radius:7px;border:1.5px solid #0f766e;background:#f0fdfa;color:#0f766e;cursor:pointer;">&#127891; Foundation</button>
+            <button type="button" class="role-pill-btn" data-role="Group 2: CA Intermediate Student" onclick="selectGateRolePill(this)" style="padding:7px 8px;font-size:11.5px;font-weight:700;border-radius:7px;border:1px solid var(--border);background:#ffffff;color:var(--text-sec);cursor:pointer;">&#128218; CA Inter</button>
+            <button type="button" class="role-pill-btn" data-role="Group 3: CA Final / Articleship / Mentor" onclick="selectGateRolePill(this)" style="padding:7px 8px;font-size:11.5px;font-weight:700;border-radius:7px;border:1px solid var(--border);background:#ffffff;color:var(--text-sec);cursor:pointer;">&#9878; CA Final / Mentor</button>
+          </div>
+          <input type="hidden" id="req-purpose" value="Group 1: CA Foundation Student" />
+        </div>
+        <div class="form-group">
+          <label>City / District (Optional)</label>
+          <input type="text" id="req-district" class="form-control" placeholder="e.g., Chennai, Madurai, Coimbatore" onkeydown="if(event.key==='Enter') submitFirstTimeAccessRequest()" />
+        </div>
+        <div id="gate-req-feedback" style="display:none;font-size:12px;padding:10px 12px;border-radius:7px;margin-bottom:10px;line-height:1.45;"></div>
+        <button type="button" id="gate-req-submit-btn" class="btn-primary" style="width:100%;padding:11px 14px;font-size:14px;font-weight:800;" onclick="submitFirstTimeAccessRequest()">
+          Unlock All CA Levels, RTPs &amp; AI Coach Now &rarr;
+        </button>
+      </div>
+
+      <!-- TAB 2: RETURNING STUDENT SIGN IN WITH EMAIL OR CODE -->
+      <div id="gate-pane-code" style="display:none;">
+        <div class="form-group">
+          <label>Enter Your Registered Email to Unlock</label>
+          <div style="display:flex;gap:6px;">
+            <input type="email" id="gate-lookup-email" class="form-control" placeholder="Enter your email address (e.g., student@gmail.com)" style="font-size:13.5px;" onkeydown="if(event.key==='Enter') lookupAccessByEmail()" />
+            <button type="button" class="btn-primary" style="white-space:nowrap;font-size:13px;padding:9px 14px;" onclick="lookupAccessByEmail()">Sign In &rarr;</button>
+          </div>
+        </div>
+        <div id="gate-code-feedback" style="display:none;font-size:12px;padding:9px 11px;border-radius:7px;margin-bottom:10px;"></div>
+
+        <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
+          <div style="font-size:11.5px;font-weight:700;color:var(--text-sec);margin-bottom:6px;">
+            Or enter your <code>CA-XXXXXX</code> Access Code directly:
+          </div>
+          <div style="display:flex;gap:6px;">
+            <input type="text" id="gate-code-input" class="form-control" placeholder="e.g., CA-7X9K2M" style="font-family:monospace;font-size:14px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;" onkeydown="if(event.key==='Enter') submitAccessCodeVerify()" />
+            <button type="button" class="btn-outline" style="white-space:nowrap;font-size:12.5px;padding:8px 12px;" onclick="submitAccessCodeVerify()">Verify Code</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;">
+        100% Free for Tamil Nadu CA Aspirants (Foundation • Inter • Final) • Includes 40 Bilingual Gemini AI Coach explanations/day.
+      </div>
+    </div>
+  </div>
+
+  <!-- OWNER ADMIN CONSOLE MODAL (Accessible via ?admin=KEY) -->
+  <div class="modal-backdrop" id="admin-access-modal" style="z-index:130;" onclick="if(event.target===this) document.getElementById('admin-access-modal').classList.remove('open')">
+    <div class="modal-card" style="max-width:860px;width:96%;padding:20px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div>
+          <h3 style="margin:0;color:var(--navy);font-size:17px;">CA Mastery Hub Gatekeeper — Access Requests &amp; Analytics</h3>
+          <p style="margin:2px 0 0 0;font-size:12px;color:var(--text-sec);">1-click approve or revoke student access codes and inspect live platform usage.</p>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="btn-outline" style="font-size:12px;padding:5px 10px;" onclick="loadAdminConsoleData()">Refresh</button>
+          <button type="button" class="btn-outline" style="font-size:12px;padding:5px 10px;" onclick="document.getElementById('admin-access-modal').classList.remove('open')">Close</button>
+        </div>
+      </div>
+      <div id="admin-analytics-strip" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;"></div>
+      <div id="admin-requests-table-wrap" style="max-height:58vh;overflow-y:auto;border:1px solid var(--border);border-radius:8px;"></div>
+    </div>
+  </div>
+
+  <script src="questions_database.js"></script>
+  <script src="past_papers_database.js"></script>
+  <script>
+    const BANK = (window.CA_QUESTION_BANK || window.NEET_QUESTION_BANK) || { modules: {}, questions: [] };
+    const PYQ_ARCHIVE = (window.CA_PAST_PAPERS_ARCHIVE || window.NEET_PAST_PAPERS_ARCHIVE) || { modules: {}, questions: [], analytics: {}, metadata: {} };
+    if (PYQ_ARCHIVE.modules) {
+      Object.assign(BANK.modules, PYQ_ARCHIVE.modules);
+    }
+    if (Array.isArray(PYQ_ARCHIVE.questions) && PYQ_ARCHIVE.questions.length > 0) {
+      const existingIds = new Set(BANK.questions.map(q => q.id));
+      PYQ_ARCHIVE.questions.forEach(q => {
+        if (!existingIds.has(q.id)) {
+          BANK.questions.push(q);
+          existingIds.add(q.id);
+        }
+      });
+    }
+    const Q_MAP = {};
+    BANK.questions.forEach(q => { Q_MAP[q.id] = q; });
+
+    function isAnswerCorrectForQ(q, chosenLetter) {
+      if (!q) return false;
+      if (q.answerStatus === "dropped") return true;
+      const accepted = Array.isArray(q.acceptedOptions) && q.acceptedOptions.length > 0
+        ? q.acceptedOptions
+        : [q.correct];
+      return Boolean(chosenLetter && accepted.includes(chosenLetter));
+    }
+
+    // Hybrid Backend Discovery: Localhost -> Relative API; GitHub Pages (neet.memnos.net) -> Live Bridge or Direct Gemini / Offline NCERT Coach
+    const DEFAULT_TUNNEL_URL = "https://same-reasonably-graduates-passengers.trycloudflare.com";
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("backend")) {
+      localStorage.setItem("tn_ca_backend_override", urlParams.get("backend").replace(/\/+$/, ""));
+    } else {
+      const savedOverride = localStorage.getItem("tn_ca_backend_override") || "";
+      if (savedOverride.includes("trycloudflare.com") && savedOverride !== DEFAULT_TUNNEL_URL) {
+        localStorage.removeItem("tn_ca_backend_override");
+      }
+    }
+
+    function getApiBase() {
+      const host = window.location.hostname;
+      if (host === "localhost" || host === "127.0.0.1" || host.startsWith("192.168.") || host.includes("trycloudflare.com")) {
+        return "";
+      }
+      return localStorage.getItem("tn_ca_backend_override") || DEFAULT_TUNNEL_URL;
+    }
+
+    async function apiFetch(path, options) {
+      const base = getApiBase();
+      try {
+        return await fetch(`${base}${path}`, options);
+      } catch (err) {
+        if (base && base !== "http://localhost:8096") {
+          return await fetch(`http://localhost:8096${path}`, options);
+        }
+        throw err;
+      }
+    }
+
+    const STORAGE_KEYS = {
+      profile: "tn_ca_student_profile_v1",
+      session: "tn_ca_active_session_v1",
+      localAttempts: "tn_ca_local_attempts_v1",
+      mistakes: "tn_ca_mistake_ids_v1",
+      chat: "tn_ca_coach_chat_v1",
+      accessCode: "tn_ca_access_code_v1",
+      deviceId: "tn_ca_device_id_v1",
+      pendingToken: "tn_ca_pending_req_token_v1"
+    };
+
+    function getDeviceId() {
+      let devId = localStorage.getItem(STORAGE_KEYS.deviceId);
+      if (!devId) {
+        devId = "dev_" + Math.random().toString(36).slice(2, 10) + "_" + Date.now().toString(36);
+        try { localStorage.setItem(STORAGE_KEYS.deviceId, devId); } catch (_) {}
+      }
+      return devId;
+    }
+
+    function getAccessCode() {
+      return (localStorage.getItem(STORAGE_KEYS.accessCode) || "").trim().toUpperCase();
+    }
+
+    function trackNeetEvent(eventName, metaObj) {
+      try {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", eventName, metaObj || {});
+        }
+      } catch (_) {}
+      try {
+        fetch(`${getApiBase()}/api/analytics/track`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            event_name: eventName,
+            student_id: profile.student_id || profile.name || "",
+            access_code: getAccessCode(),
+            page_url: window.location.pathname,
+            meta: metaObj || {}
+          })
+        }).catch(() => {});
+      } catch (_) {}
+    }
+
+    let profile = {
+      student_id: "tn_ca_student_1",
+      name: "CA Aspirant",
+      district: "Chennai (SIRC HQ)",
+      board: "Level 1: CA Foundation (After Class 12)",
+      quota_category: "ICAI BoS Free Live + Self Study",
+      language_pref: "bilingual",
+      target_score: 65,
+      custom_gemini_key: ""
+    };
+
+    let state = {
+      moduleId: "ca_all_levels_mock_1",
+      mode: "mock",
+      questionIds: [],
+      filteredIds: [],
+      subjectFilter: "All",
+      currentIndex: 0,
+      answers: {},
+      markedReview: {},
+      revealedPractice: {},
+      submittedResult: null,
+      remainingSec: 4800,
+      elapsedSec: 0,
+      timerHandle: null
+    };
+
+    let chatHistory = [];
+    let backendOnline = false;
+
+    function initApp() {
+      try {
+        const savedProf = JSON.parse(localStorage.getItem(STORAGE_KEYS.profile) || "null");
+        if (savedProf && savedProf.name) profile = { ...profile, ...savedProf };
+      } catch (_) {}
+
+      document.getElementById("lang-select").value = profile.language_pref || "bilingual";
+      updateProfilePill();
+
+      const sel = document.getElementById("module-select");
+      sel.innerHTML = "";
+      const groups = [
+        { label: "ICAI 3-Level Comprehensive Mocks & Statutory Drills (Foundation • Inter • Final)", filter: m => !m.isPastPaper && !m.isExemplarOrCoaching },
+        { label: "ICAI RTP, MTP, Finance Act AY 2026-27 & Landmark Case Law Modules", filter: m => Boolean(m.isExemplarOrCoaching) || Boolean(m.isControversialModule) },
+        { label: "ICAI New Scheme Past Exam & RTP Papers (2024–2026)", filter: m => m.isPastPaper && !m.isControversialModule && m.paperLanguage !== "ta" && (m.examYear || 0) >= 2024 },
+        { label: "Bilingual தமிழ் + English CA Concept & Case-Scenario Booklets", filter: m => m.isPastPaper && m.paperLanguage === "ta" },
+        { label: "ICAI Past Exam & RTP Papers (2019–2023)", filter: m => m.isPastPaper && m.paperLanguage !== "ta" && (m.examYear || 0) < 2024 }
+      ];
+      const allMods = Object.values(BANK.modules);
+      groups.forEach(g => {
+        const items = allMods.filter(g.filter);
+        if (!items.length) return;
+        const og = document.createElement("optgroup");
+        og.label = g.label;
+        items.forEach(mod => {
+          const opt = document.createElement("option");
+          opt.value = mod.id;
+          opt.textContent = mod.title;
+          og.appendChild(opt);
+        });
+        sel.appendChild(og);
+      });
+
+      let restored = false;
+      try {
+        const savedSess = JSON.parse(localStorage.getItem(STORAGE_KEYS.session) || "null");
+        if (savedSess && Array.isArray(savedSess.questionIds) && savedSess.questionIds.length > 0) {
+          state = { ...state, ...savedSess, timerHandle: null };
+          sel.value = state.moduleId;
+          restored = true;
+        }
+      } catch (_) {}
+
+      if (!restored) {
+        const firstModId = BANK.modules["ca_all_levels_mock_1"] ? "ca_all_levels_mock_1" : Object.keys(BANK.modules)[0]; loadSelectedModule(firstModId, true);
+      } else {
+        applySubjectFilter(state.subjectFilter || "All", true);
+        startTimerLoop();
+      }
+
+      try {
+        chatHistory = JSON.parse(localStorage.getItem(STORAGE_KEYS.chat) || "[]");
+      } catch (_) { chatHistory = []; }
+
+      if (chatHistory.length === 0) {
+        chatHistory.push({
+          sender: "coach",
+          text: "வணக்கம்! Welcome to your **Tamil Nadu ICAI CA Mastery Workspace (Foundation • Intermediate • Final & SPOM)**. Select any question or click **Ask Coach** for step-by-step **ICAI Working Notes**, **Statutory Provisions (Companies Act, Income Tax AY 2026-27, CGST, AS/Ind AS, SAs)**, **தமிழ் விளக்கம்**, and **60%+ Exemption** strategies."
+        });
+      }
+      renderChat();
+      renderPyqArchiveHub();
+      checkServerHealth();
+      initAccessGateAndAnalytics();
+    }
+
+    async function checkServerHealth() {
+      const statusEl = document.getElementById("coach-engine-status");
+      if (profile.custom_gemini_key) {
+        statusEl.textContent = "Google Gemini Direct Live (EN + தமிழ்)";
+      }
+      try {
+        const ctrl = new AbortController();
+        setTimeout(() => ctrl.abort(), 4500);
+        const res = await fetch(`${getApiBase()}/api/health`, { signal: ctrl.signal });
+        if (res.ok) {
+          backendOnline = true;
+          const data = await res.json();
+          if (!profile.custom_gemini_key) {
+            statusEl.textContent = (data.gemini_engine === "google_gemini_api" || data.gemini_engine === "gemini_agy_cli")
+              ? "Gemini AI Live (EN + தமிழ்)"
+              : "Bilingual NCERT Coach Ready";
+          }
+          return;
+        }
+      } catch (_) {}
+      backendOnline = false;
+      if (!profile.custom_gemini_key) {
+        statusEl.textContent = "NCERT Bilingual Coach Ready (EN + தமிழ்)";
+      }
+    }
+
+    function saveSession() {
+      const copy = { ...state, timerHandle: null };
+      try { localStorage.setItem(STORAGE_KEYS.session, JSON.stringify(copy)); } catch (_) {}
+    }
+
+    function getMistakeIds() {
+      try {
+        const arr = JSON.parse(localStorage.getItem(STORAGE_KEYS.mistakes) || "[]");
+        return Array.isArray(arr) ? arr.filter(id => Q_MAP[id]) : [];
+      } catch (_) { return []; }
+    }
+
+    function addMistakeIds(ids) {
+      const set = new Set(getMistakeIds());
+      ids.forEach(id => { if (Q_MAP[id]) set.add(Number(id)); });
+      localStorage.setItem(STORAGE_KEYS.mistakes, JSON.stringify(Array.from(set)));
+    }
+
+    function buildRandomSprintIds(perSubj = 5) {
+      const subjects = ["CA Foundation", "CA Inter G1", "CA Inter G2", "CA Final & SPOM"];
+      const picked = [];
+      subjects.forEach(s => {
+        const pool = BANK.questions.filter(q => q.subject === s).map(q => q.id);
+        for (let i = pool.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        picked.push(...pool.slice(0, perSubj));
+      });
+      return picked;
+    }
+
+    function buildSubjectPyqSprintIds(subjectName, count = 45) {
+      const pool = BANK.questions
+        .filter(q => q.subject === subjectName && q.id >= 10000 && q.language !== "ta")
+        .map(q => q.id);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      return pool.slice(0, count);
+    }
+
+    function loadSelectedModule(modId) {
+      const mod = BANK.modules[modId];
+      if (!mod) return;
+
+      let qIds = [];
+      if (mod.isDynamicRandom) {
+        qIds = buildRandomSprintIds(mod.perSubjectCount || 5);
+      } else if (mod.isDynamicSubjectPyq) {
+        qIds = buildSubjectPyqSprintIds(mod.targetSubject || "Botany", mod.sampleCount || 45);
+      } else if (mod.isMistakeBank) {
+        qIds = getMistakeIds();
+        if (qIds.length === 0) {
+          qIds = [105, 106, 118, 202, 204, 207, 212, 301, 305, 307, 312, 401, 412, 417, 420];
+        }
+      } else {
+        qIds = [...mod.questionIds];
+      }
+
+      document.getElementById("module-select").value = modId;
+      state = {
+        moduleId: modId,
+        mode: mod.mode || "mock",
+        questionIds: qIds,
+        filteredIds: [...qIds],
+        subjectFilter: "All",
+        currentIndex: 0,
+        answers: {},
+        markedReview: {},
+        revealedPractice: {},
+        submittedResult: null,
+        remainingSec: (mod.durationMinutes || qIds.length) * 60,
+        elapsedSec: 0,
+        timerHandle: state.timerHandle
+      };
+
+      document.getElementById("mock-result-banner").style.display = "none";
+      document.getElementById("submit-exam-btn").style.display = "inline-block";
+      saveSession();
+      applySubjectFilter("All", true);
+      startTimerLoop();
+    }
+
+    function startFreshAttempt() { loadSelectedModule(state.moduleId); }
+
+    function startTimerLoop() {
+      if (state.timerHandle) clearInterval(state.timerHandle);
+      updateTimerDisplay();
+      state.timerHandle = setInterval(() => {
+        if (state.submittedResult) return;
+        state.elapsedSec += 1;
+        if (state.remainingSec > 0) {
+          state.remainingSec -= 1;
+          updateTimerDisplay();
+          if (state.remainingSec === 0 && state.mode === "mock") submitCurrentExam(true);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const el = document.getElementById("exam-timer");
+      const m = Math.floor(state.remainingSec / 60);
+      const s = state.remainingSec % 60;
+      el.textContent = `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+      el.classList.toggle("urgent", state.remainingSec < 300 && !state.submittedResult);
+    }
+
+    function applySubjectFilter(subj, keepIndex = false) {
+      state.subjectFilter = subj;
+      state.filteredIds = subj === "All"
+        ? [...state.questionIds]
+        : state.questionIds.filter(id => Q_MAP[id] && Q_MAP[id].subject === subj);
+      if (!keepIndex || state.currentIndex >= state.filteredIds.length) state.currentIndex = 0;
+      renderSubjectPills();
+      renderOMRPalette();
+      renderCurrentQuestion();
+    }
+
+    function renderSubjectPills() {
+      const wrap = document.getElementById("subject-pills");
+      const subjectsPresent = ["All"];
+      ["CA Foundation", "CA Inter G1", "CA Inter G2", "CA Final & SPOM"].forEach(s => {
+        if (state.questionIds.some(id => Q_MAP[id] && Q_MAP[id].subject === s)) subjectsPresent.push(s);
+      });
+
+      wrap.innerHTML = subjectsPresent.map(s => {
+        const ids = s === "All" ? state.questionIds : state.questionIds.filter(id => Q_MAP[id].subject === s);
+        const ansCount = ids.filter(id => state.answers[id]).length;
+        const activeCls = state.subjectFilter === s ? "active" : "";
+        return `<button class="subj-pill ${activeCls}" onclick="applySubjectFilter('${s}')">${s} (${ansCount}/${ids.length})</button>`;
+      }).join("");
+    }
+
+    function renderOMRPalette() {
+      document.getElementById("omr-mode-heading").textContent =
+        state.mode === "mock" ? "ICAI Mock Question Grid" : "Practice Question Grid";
+
+      const grid = document.getElementById("omr-grid");
+      const activeQid = state.filteredIds[state.currentIndex];
+
+      grid.innerHTML = state.filteredIds.map((qid, idx) => {
+        const globalNum = state.questionIds.indexOf(qid) + 1;
+        const ans = state.answers[qid];
+        const rev = state.markedReview[qid];
+        let cls = "omr-num-btn";
+        if (qid === activeQid) cls += " current";
+
+        if (state.submittedResult) {
+          const qObj = Q_MAP[qid];
+          if (qObj && qObj.answerStatus === "dropped") cls += " answered";
+          else if (ans && isAnswerCorrectForQ(qObj, ans)) cls += " answered";
+          else if (ans && !isAnswerCorrectForQ(qObj, ans)) cls += " wrong-review";
+        } else {
+          if (rev) cls += " review";
+          else if (ans) cls += " answered";
+        }
+        return `<button class="${cls}" onclick="jumpToFilteredFromOMR(${idx})">${globalNum}</button>`;
+      }).join("");
+
+      const total = state.questionIds.length;
+      const answered = state.questionIds.filter(id => state.answers[id]).length;
+      const reviewCnt = state.questionIds.filter(id => state.markedReview[id]).length;
+      document.getElementById("omr-live-stats").innerHTML =
+        `Answered: <strong>${answered}/${total}</strong> | Review: <strong>${reviewCnt}</strong><br>` +
+        `Pass: <strong>40%</strong> Paper | <strong>50%</strong> Agg | <strong>60%+</strong> Exempt`;
+
+      const mLabel = document.getElementById("mnav-omr-label");
+      if (mLabel) mLabel.textContent = `OMR (${answered}/${total})`;
+    }
+
+    function jumpToFilteredFromOMR(idx) {
+      if (isFreePreviewVisitor() && idx >= FREE_PREVIEW_QUESTION_LIMIT) {
+        openAccessGateModal(`You've tried the first 3 sample questions! Enter your Name &amp; Email below to unlock Question #${idx + 1} and all 7,484 NEET Questions immediately — 100% free.`);
+        return;
+      }
+      state.currentIndex = idx;
+      saveSession();
+      renderOMRPalette();
+      renderCurrentQuestion();
+      // On mobile, tapping a bubble number jumps straight back to the Question pane!
+      if (window.innerWidth <= 960) {
+        switchMobilePane("question");
+      }
+    }
+
+    function navQuestion(delta) {
+      const next = state.currentIndex + delta;
+      if (next >= 0 && next < state.filteredIds.length) {
+        if (isFreePreviewVisitor() && next >= FREE_PREVIEW_QUESTION_LIMIT) {
+          openAccessGateModal(`You've completed the 3-question free preview! Enter your Name &amp; Email below to unlock Question #${next + 1} and all 7,484 NEET Questions immediately — 100% free.`);
+          return;
+        }
+        state.currentIndex = next;
+        saveSession();
+        renderOMRPalette();
+        renderCurrentQuestion();
+        document.getElementById("question-scroll").scrollTop = 0;
+      }
+    }
+
+    function getCurrentQ() {
+      const qid = state.filteredIds[state.currentIndex];
+      return Q_MAP[qid] || null;
+    }
+
+    function renderCurrentQuestion() {
+      const q = getCurrentQ();
+      if (!q) return;
+
+      const globalNum = state.questionIds.indexOf(q.id) + 1;
+      const lang = profile.language_pref || "bilingual";
+
+      const statusBadgeHtml = q.answerStatus === "dropped"
+        ? `<span class="badge" style="background:#fef3c7;color:#92400e;border-color:#fde68a;">NTA DROPPED (+4 TO ALL)</span>`
+        : (q.answerStatus === "multiple" && Array.isArray(q.acceptedOptions)
+          ? `<span class="badge" style="background:#e0e7ff;color:#1e40af;border-color:#c7d2fe;">NTA MULTI-KEY (${escapeHtml(q.acceptedOptions.join(" / "))})</span>`
+          : (q.answerStatus === "sc_landmark"
+            ? `<span class="badge" style="background:#fce7f3;color:#9d174d;border-color:#fbcfe8;">SUPREME COURT LANDMARK</span>`
+            : ""));
+
+      const isFoundQ = String(q.subject || "").includes("Foundation");
+      const mBadgeEl = document.getElementById("q-marking-badge");
+      if (mBadgeEl) {
+        mBadgeEl.textContent = isFoundQ ? "+1 / -0.25 Foundation MCQ" : "+2 / 0 Case-Scenario MCQ";
+      }
+      document.getElementById("q-badges").innerHTML = `
+        <span class="badge" style="background:var(--navy);color:#fff;border-color:var(--navy);">Q.${globalNum}/${state.questionIds.length}</span>
+        <span class="badge badge-subj">${escapeHtml(q.subject)}</span>
+        <span class="badge">${escapeHtml(q.classLevel)} — ${escapeHtml(q.chapter)}</span>
+        <span class="badge badge-pyq">${escapeHtml(q.pyqTag)}</span>
+        ${statusBadgeHtml}
+      `;
+
+      const stemEnEl = document.getElementById("q-stem-en");
+      const stemTaEl = document.getElementById("q-stem-ta");
+
+      if (lang === "en") {
+        stemEnEl.style.display = "block";
+        stemEnEl.style.fontSize = "15px";
+        stemEnEl.style.color = "var(--text-main)";
+        stemEnEl.innerHTML = renderInlineRich(q.stem_en);
+        stemTaEl.style.display = "none";
+      } else if (lang === "ta") {
+        stemTaEl.style.display = "block";
+        stemTaEl.innerHTML = renderInlineRich(q.stem_ta);
+        stemEnEl.style.display = "block";
+        stemEnEl.style.fontSize = "13px";
+        stemEnEl.style.color = "#475569";
+        stemEnEl.innerHTML = "<strong>[NCERT English Reference]</strong> " + renderInlineRich(q.stem_en);
+      } else {
+        stemEnEl.style.display = "block";
+        stemEnEl.style.fontSize = "15px";
+        stemEnEl.style.color = "var(--text-main)";
+        stemEnEl.innerHTML = renderInlineRich(q.stem_en);
+        stemTaEl.style.display = "block";
+        stemTaEl.innerHTML = renderInlineRich(q.stem_ta);
+      }
+
+      const selected = state.answers[q.id] || "";
+      const allowPreviewReveal = state.mode === "practice" || (isFreePreviewVisitor() && state.currentIndex < FREE_PREVIEW_QUESTION_LIMIT);
+      const showSolution = Boolean(state.submittedResult) || (allowPreviewReveal && state.revealedPractice[q.id]);
+
+      document.getElementById("check-instant-btn").style.display =
+        (allowPreviewReveal && !state.submittedResult) ? "inline-block" : "none";
+
+      document.getElementById("mark-review-btn").textContent =
+        state.markedReview[q.id] ? "Unmark" : "Review";
+
+      const acceptedList = (Array.isArray(q.acceptedOptions) && q.acceptedOptions.length > 0)
+        ? q.acceptedOptions
+        : [q.correct];
+
+      document.getElementById("choices-container").innerHTML = q.choices.map(c => {
+        let rowCls = "choice-row";
+        if (showSolution) {
+          if (q.answerStatus === "dropped" || acceptedList.includes(c.letter)) rowCls += " correct-reveal";
+          else if (selected === c.letter && !acceptedList.includes(selected)) rowCls += " wrong-reveal";
+        } else if (selected === c.letter) {
+          rowCls += " selected";
+        }
+
+        const showTa = lang !== "en" && c.text_ta;
+        return `
+          <div class="${rowCls}" onclick="selectBubble('${c.letter}')">
+            <div class="omr-bubble">${c.letter}</div>
+            <div class="choice-texts">
+              ${lang === "ta"
+                ? `<div class="choice-en">${renderInlineRich(c.text_ta)}</div>${c.text_ta !== c.text_en ? `<div class="choice-ta">${renderInlineRich(c.text_en)}</div>` : ""}`
+                : `<div class="choice-en">${renderInlineRich(c.text_en)}</div>${showTa && c.text_ta !== c.text_en ? `<div class="choice-ta">${renderInlineRich(c.text_ta)}</div>` : ""}`
+              }
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      const solPanel = document.getElementById("solution-panel");
+      if (showSolution) {
+        let statusTag = "Unattempted (0 Marks)";
+        if (q.answerStatus === "dropped") {
+          statusTag = "NTA Dropped Question (+4 Bonus Marks Awarded to All Candidates)";
+        } else if (selected && acceptedList.includes(selected)) {
+          statusTag = acceptedList.length > 1
+            ? `Correct Bubble ${selected} (+4 Marks — NTA Accepted: ${acceptedList.join(" or ")})`
+            : `Correct Bubble ${selected} (+4 Marks)`;
+        } else if (selected) {
+          statusTag = `Incorrect Bubble ${selected} (-1 Mark) — Official Key: ${acceptedList.join(" / ")}`;
+        }
+
+        const trapRows = Object.entries(q.trap_breakdown || {}).map(
+          ([opt, txt]) => `<div><strong>Option ${escapeHtml(opt)}:</strong> ${renderInlineRich(txt)}</div>`
+        ).join("");
+
+        const vid = q.videoTutorial || {};
+        solPanel.style.display = "block";
+        solPanel.innerHTML = `
+          <h4>Verified ICAI Statutory Solution &amp; Working Note — ${statusTag}</h4>
+          <div class="sol-block"><strong>ICAI BoS / Statutory Ref:</strong> ${escapeHtml(q.ncertRef)}</div>
+          <div class="sol-block"><strong>ICAI Working Note &amp; Provision (English):</strong> ${renderInlineRich(q.explanation_en)}</div>
+          <div class="sol-block"><strong>தமிழ் விளக்கம்:</strong> ${renderInlineRich(q.explanation_ta)}</div>
+          <div class="sol-block"><strong>ICAI Examiner Tip &amp; 60% Exemption Rule:</strong> ${renderInlineRich(q.ncert_key_point)}</div>
+          <div class="trap-box">
+            <div style="font-weight:700;margin-bottom:4px;color:var(--rose);">Why Other Options Fail (ICAI Examiner Traps):</div>
+            ${trapRows}
+          </div>
+          ${vid.url ? `<div style="margin-top:10px;"><a class="resource-link" href="${escapeHtml(vid.url)}" target="_blank" rel="noopener">Watch Topic Tutorial: ${escapeHtml(vid.title)} (${escapeHtml(vid.channel)}) &rarr;</a></div>` : ""}
+        `;
+      } else {
+        solPanel.style.display = "none";
+      }
+    }
+
+    function selectBubble(letter) {
+      if (state.submittedResult) return;
+      const q = getCurrentQ();
+      if (!q) return;
+      state.answers[q.id] = letter;
+      saveSession();
+      renderSubjectPills();
+      renderOMRPalette();
+      renderCurrentQuestion();
+    }
+
+    function clearBubble() {
+      if (state.submittedResult) return;
+      const q = getCurrentQ();
+      if (!q) return;
+      delete state.answers[q.id];
+      delete state.revealedPractice[q.id];
+      saveSession();
+      renderSubjectPills();
+      renderOMRPalette();
+      renderCurrentQuestion();
+    }
+
+    function toggleMarkReview() {
+      if (state.submittedResult) return;
+      const q = getCurrentQ();
+      if (!q) return;
+      state.markedReview[q.id] = !state.markedReview[q.id];
+      saveSession();
+      renderOMRPalette();
+      renderCurrentQuestion();
+    }
+
+    function revealPracticeSolution() {
+      const q = getCurrentQ();
+      if (!q) return;
+      state.revealedPractice[q.id] = true;
+      if (state.answers[q.id] && !isAnswerCorrectForQ(q, state.answers[q.id])) addMistakeIds([q.id]);
+      saveSession();
+      renderCurrentQuestion();
+    }
+
+    function openMobileCoachForCurrentQ() {
+      if (isFreePreviewVisitor()) {
+        openAccessGateModal("Enter your Name &amp; Email below to unlock your 24/7 Bilingual (தமிழ் + English) Gemini AI Coach immediately — 100% free.");
+        return;
+      }
+      if (window.innerWidth <= 960) {
+        switchMobilePane("coach");
+      }
+      const q = getCurrentQ();
+      if (!q) {
+        document.getElementById("coach-input").focus();
+        return;
+      }
+      const globalNum = state.questionIds.indexOf(q.id) + 1;
+      const userChoice = state.answers[q.id] || "";
+      let autoPrompt;
+      if (profile.language_pref === "ta") {
+        autoPrompt = userChoice
+          ? `வினா ${globalNum} (${q.subject} — ${q.chapter}): நான் தேர்ந்தெடுத்த விருப்பம் ${userChoice} சரியானதா? ICAI விதி மற்றும் கணக்கீட்டுடன் தமிழில் படிப்படியாக விளக்கவும்.`
+          : `வினா ${globalNum} (${q.subject} — ${q.chapter}): இந்த வினாவை ICAI விதி மற்றும் கணக்கீட்டுடன் தமிழில் படிப்படியாக விளக்கவும்.`;
+      } else {
+        autoPrompt = userChoice
+          ? `Explain Q.${globalNum} (${q.subject} — ${q.chapter}) step-by-step with ICAI Working Note / Statutory Section and check my selected option ${userChoice}.`
+          : `Explain Q.${globalNum} (${q.subject} — ${q.chapter}) step-by-step with ICAI Working Note / Statutory Section and highlight the examiner trap.`;
+      }
+      sendCoachMessage(autoPrompt);
+    }
+
+    function evaluateTnTierLocal(pct100, quota) {
+      if (pct100 >= 70) return "ICAI Distinction & Rank Trajectory (70%+) — 60%+ Exemption & 50% Aggregate Cleared!";
+      if (pct100 >= 60) return "ICAI 60%+ EXEMPTION SECURED — Exempt for 3 Attempts & 50% Group Aggregate Cleared!";
+      if (pct100 >= 50) return "ICAI PASS (50%+ Group Aggregate & 40%+ Paper Minimum Met) — Push for 60%+ Exemption!";
+      if (pct100 >= 40) return "40% Paper Floor Met, but Below 50% ICAI Group Aggregate — Need +10% in Practical/MCQ Papers";
+      return "Below 40% ICAI Paper Minimum — Focus on BoS Case Scenarios, AS/Ind AS & Statutory Amendments";
+    }
+
+    async function submitCurrentExam(autoTimeout = false) {
+      if (state.submittedResult) return;
+      if (isFreePreviewVisitor() && !autoTimeout) {
+        openAccessGateModal("Enter your Name &amp; Email below to grade your OMR sheet and unlock your 720-scale Tamil Nadu Medical College cutoff report.");
+        return;
+      }
+      const mod = BANK.modules[state.moduleId] || { title: "NEET Paper" };
+      const payload = {
+        student_id: profile.student_id,
+        student_name: profile.name,
+        quota_category: profile.quota_category,
+        module_id: state.moduleId,
+        module_title: mod.title,
+        mode: state.mode,
+        time_spent_sec: state.elapsedSec,
+        question_ids: state.questionIds,
+        answers: state.answers
+      };
+
+      let graded = null;
+      try {
+        const res = await fetch(`${getApiBase()}/api/submit_attempt`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) graded = await res.json();
+      } catch (_) {}
+
+      if (!graded) graded = gradeLocally(payload);
+
+      state.submittedResult = graded;
+      if (graded.wrong_question_ids && graded.wrong_question_ids.length) {
+        addMistakeIds(graded.wrong_question_ids);
+      }
+
+      try {
+        const arr = JSON.parse(localStorage.getItem(STORAGE_KEYS.localAttempts) || "[]");
+        arr.unshift(graded);
+        localStorage.setItem(STORAGE_KEYS.localAttempts, JSON.stringify(arr.slice(0, 100)));
+      } catch (_) {}
+
+      saveSession();
+      document.getElementById("submit-exam-btn").style.display = "none";
+      renderMockResultBanner(graded, autoTimeout);
+      renderOMRPalette();
+      renderCurrentQuestion();
+      if (window.innerWidth <= 960) switchMobilePane("question");
+      document.getElementById("question-scroll").scrollTop = 0;
+    }
+
+    function gradeLocally(payload) {
+      let correct = 0, wrong = 0, unans = 0, raw = 0, maxS = 0, negLost = 0;
+      const wrongIds = [];
+      const sb = {};
+      payload.question_ids.forEach(qid => {
+        const q = Q_MAP[qid];
+        if (!q) return;
+        const isFound = String(q.subject || "").includes("Foundation");
+        const qCorr = isFound ? 1 : 2;
+        const qWrong = isFound ? -0.25 : 0;
+        if (!sb[q.subject]) sb[q.subject] = { total: 0, correct: 0, wrong: 0, unanswered: 0, score: 0, max_score: 0 };
+        sb[q.subject].total += 1;
+        sb[q.subject].max_score += qCorr;
+        maxS += qCorr;
+        const ch = payload.answers[qid];
+        if (q.answerStatus === "dropped") {
+          correct += 1; raw += qCorr; sb[q.subject].correct += 1; sb[q.subject].score += qCorr;
+        } else if (!ch) {
+          unans += 1; sb[q.subject].unanswered += 1;
+        } else if (isAnswerCorrectForQ(q, ch)) {
+          correct += 1; raw += qCorr; sb[q.subject].correct += 1; sb[q.subject].score += qCorr;
+        } else {
+          wrong += 1; wrongIds.push(qid); raw += qWrong; negLost += Math.abs(qWrong); sb[q.subject].wrong += 1; sb[q.subject].score += qWrong;
+        }
+      });
+      raw = Math.round(raw * 100) / 100;
+      negLost = Math.round(negLost * 100) / 100;
+      const total = payload.question_ids.length;
+      const proj = maxS > 0 ? Math.round((raw / maxS) * 100) : 0;
+      return {
+        student_name: payload.student_name,
+        module_id: payload.module_id,
+        module_title: payload.module_title,
+        total_questions: total,
+        attempted: correct + wrong,
+        correct_count: correct,
+        wrong_count: wrong,
+        unanswered_count: unans,
+        raw_score: raw,
+        max_score: maxS,
+        negative_marks_lost: negLost,
+        accuracy_pct: (correct + wrong) > 0 ? Math.round((correct / (correct + wrong)) * 1000) / 10 : 0,
+        projected_720: proj,
+        tn_college_tier: evaluateTnTierLocal(proj, payload.quota_category),
+        subject_breakdown: sb,
+        wrong_question_ids: wrongIds,
+        created_at: new Date().toLocaleString()
+      };
+    }
+
+    function renderMockResultBanner(g, autoTimeout) {
+      const banner = document.getElementById("mock-result-banner");
+      const subjSummary = Object.entries(g.subject_breakdown || {}).map(
+        ([s, v]) => `<span style="margin-right:12px;display:inline-block;"><strong>${escapeHtml(s)}:</strong> ${v.score}/${v.max_score} (${v.correct}C, ${v.wrong}W)</span>`
+      ).join("");
+
+      banner.style.display = "block";
+      banner.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+          <div>
+            <div style="font-size:11.5px;color:#99f6e4;font-weight:700;text-transform:uppercase;">
+              ${autoTimeout ? "Time Expired — OMR Graded" : "OMR Graded & Saved to Score Tracker"}
+            </div>
+            <div style="font-size:15px;font-weight:800;margin-top:2px;">${escapeHtml(g.tn_college_tier)}</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button class="btn-outline" style="font-size:11.5px;padding:6px 10px;" onclick="copyWhatsAppScoreReport()">Share Report</button>
+            <button class="btn-primary" style="font-size:11.5px;padding:6px 10px;" onclick="switchMobilePane('tracker')">Score Analytics</button>
+          </div>
+        </div>
+        <div class="mock-result-grid">
+          <div class="res-stat">
+            <div class="res-stat-label">Raw Score</div>
+            <div class="res-stat-val">${g.raw_score} / ${g.max_score}</div>
+          </div>
+          <div class="res-stat">
+            <div class="res-stat-label">ICAI Score %</div>
+            <div class="res-stat-val" style="color:#5eead4;">${g.projected_720}%</div>
+          </div>
+          <div class="res-stat">
+            <div class="res-stat-label">Correct</div>
+            <div class="res-stat-val" style="color:#6ee7b7;">${g.correct_count}</div>
+          </div>
+          <div class="res-stat">
+            <div class="res-stat-label">Wrong / Trap</div>
+            <div class="res-stat-val" style="color:#fda4af;">${g.wrong_count} (-${g.negative_marks_lost})</div>
+          </div>
+          <div class="res-stat">
+            <div class="res-stat-label">Accuracy</div>
+            <div class="res-stat-val">${g.accuracy_pct}%</div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:12px;color:#cbd5e1;">${subjSummary}</div>
+      `;
+    }
+
+    /* MATH, LATEX & CHEMICAL FORMULA ENGINE (KATEX + OFFLINE FALLBACK + PLAIN SCIENCE) */
+    const LATEX_SYM_MAP = {
+      "\\varepsilon": "ε", "\\epsilon": "ϵ", "\\alpha": "α", "\\beta": "β", "\\gamma": "γ",
+      "\\delta": "δ", "\\Delta": "Δ", "\\theta": "θ", "\\Theta": "Θ", "\\lambda": "λ",
+      "\\mu": "μ", "\\nu": "ν", "\\pi": "π", "\\rho": "ρ", "\\sigma": "σ", "\\tau": "τ",
+      "\\phi": "φ", "\\omega": "ω", "\\Omega": "Ω", "\\eta": "η",
+      "\\times": "×", "\\cdot": "·", "\\propto": "∝", "\\approx": "≈", "\\neq": "≠",
+      "\\leq": "≤", "\\le": "≤", "\\geq": "≥", "\\ge": "≥", "\\pm": "±", "\\mp": "∓",
+      "\\rightarrow": "→", "\\to": "→", "\\leftarrow": "←", "\\Rightarrow": "⇒",
+      "\\rightleftharpoons": "⇌", "\\infty": "∞", "\\circ": "°"
+    };
+
+    function renderLatexFallbackHtml(tex, displayMode) {
+      let s = String(tex || "").trim();
+      s = s.replace(/\\left\s*([()[\]|.])/g, "$1").replace(/\\right\s*([()[\]|.])/g, "$1");
+      s = escapeHtml(s);
+      s = s.replace(/\\(?:text|mathrm|textrm|ce)\{([^{}]*)\}/g, "$1");
+      s = s.replace(/\\(?:mathbf|boldsymbol|textbf)\{([^{}]*)\}/g, "<strong>$1</strong>");
+      s = s.replace(/\\vec\{([^{}]*)\}/g, "$1&#8407;");
+      for (let pass = 0; pass < 4; pass++) {
+        s = s.replace(/\\overline\{([^{}]*)\}/g, '<span style="text-decoration:overline;">$1</span>');
+        s = s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g, '<span class="fb-frac"><span class="fb-num">$1</span><span class="fb-den">$2</span></span>');
+        s = s.replace(/\\sqrt\{([^{}]*)\}/g, "√($1)");
+      }
+      s = s.replace(/\\max\b/g, "max").replace(/\\min\b/g, "min").replace(/\\log\b/g, "log").replace(/\\sin\b/g, "sin").replace(/\\cos\b/g, "cos").replace(/\\tan\b/g, "tan");
+      for (const [cmd, sym] of Object.entries(LATEX_SYM_MAP)) {
+        s = s.split(cmd).join(sym);
+      }
+      s = s.replace(/\\[,;!]/g, " ");
+      s = s.replace(/\\([%_{} ])/g, "$1");
+      s = s.replace(/\^\{([^{}]+)\}/g, "<sup>$1</sup>").replace(/\^([A-Za-z0-9+\-]+)/g, "<sup>$1</sup>");
+      s = s.replace(/_\{([^{}]+)\}/g, "<sub>$1</sub>").replace(/_([A-Za-z0-9+\-]+)/g, "<sub>$1</sub>");
+      return `<span class="${displayMode ? "math-block" : "math-inline"}">${s}</span>`;
+    }
+
+    function renderMathTokenHtml(tex, displayMode) {
+      const cleanTex = String(tex || "").trim();
+      if (!cleanTex) return "";
+      if (window.katex && typeof window.katex.renderToString === "function") {
+        try {
+          const html = window.katex.renderToString(cleanTex, {
+            displayMode: Boolean(displayMode),
+            throwOnError: false,
+            strict: false,
+            trust: false
+          });
+          return `<span class="${displayMode ? "math-block" : "math-inline"}">${html}</span>`;
+        } catch (_) {}
+      }
+      return renderLatexFallbackHtml(cleanTex, displayMode);
+    }
+
+    function extractMathTokens(rawText) {
+      const tokens = [];
+      const pushTok = (tex, displayMode) => {
+        const key = `@@MTOK_${tokens.length}@@`;
+        tokens.push({ key, tex, displayMode });
+        return key;
+      };
+      let s = String(rawText || "");
+      s = s.replace(/\$\$([\s\S]+?)\$\$/g, (_, m) => pushTok(m, true));
+      s = s.replace(/\\\[([\s\S]+?)\\\]/g, (_, m) => pushTok(m, true));
+      s = s.replace(/\\\(([\s\S]+?)\\\)/g, (_, m) => pushTok(m, false));
+      s = s.replace(/\$([^$\n]+?)\$/g, (_, m) => pushTok(m, false));
+      return { textWithTokens: s, tokens };
+    }
+
+    function restoreMathTokens(htmlStr, tokens) {
+      let out = htmlStr;
+      for (const t of tokens) {
+        out = out.split(t.key).join(renderMathTokenHtml(t.tex, t.displayMode));
+      }
+      return out;
+    }
+
+    const MULTI_CHEM_RE = /\b(C6H12O6|Na2Cr2O7|CH3CH2NH2|C6H5CH2CHO|C6H5CH2OH|C6H5COONa|CH3COCH3|CH3CH2Br|CH3CH2CHO|CH3CONH2|CH3COOH|C6H5CHO|CH3CHO|CH3NH2|CH3CN|CH3Br|CHCl3|CCl4|CCl2|CaCO3|CaCl2|BaCl2|Na2CO3|H2SO4|FeSO4|HNO3|HNO2|KMnO4|K2Cr2O7|LiAlH4|P2O5|NaNO2|XeF4|SF4|NiCl4|MnO2|FADH2|pCO2|pO2|IP3|Fe4|Na4|Al2|MnO4|SO4|PO4|NO2|NO3|NH3|NH4|CH3|CH2|CO2|H2O|Br2|Cl2)(?=\b|\^|&|[),.;:])/g;
+
+    function beautifyPlainScienceSegment(seg) {
+      let s = seg;
+      s = s.replace(/\s-&gt;\s/g, " &rarr; ").replace(/\s=&gt;\s/g, " &rArr; ");
+      for (let pass = 0; pass < 3; pass++) {
+        s = s.replace(/sqrt\(([^()]*(?:\([^()]*\)[^()]*)*)\)/g, (_, inner) =>
+          /^[A-Za-z0-9]+$/.test(inner.trim()) ? `&radic;${inner.trim()}` : `&radic;(${inner})`
+        );
+      }
+      // Bracketed complex ion charges e.g. [Ni(CN)4]^2-
+      s = s.replace(/\]\^(\d*[+\-])/g, (_, chg) => `]<sup>${chg.replace("-", "&minus;")}</sup>`);
+      // Parenthesized exponents e.g. B^(1/2)
+      s = s.replace(/([A-Za-z0-9)\]])\^\(([^()]+)\)/g, "$1<sup>$2</sup>");
+      // Standard exponents & ion charges e.g. 10^-8, m/s^2, sp^3d^2, MnO4^-, O2^2-, Na^+
+      s = s.replace(/([A-Za-z0-9)\]])\^(-?\d+(?:\.\d+)?[+\-]?|[+\-])/g, (_, base, exp) =>
+        `${base}<sup>${exp.replace(/-/g, "&minus;")}</sup>`
+      );
+      // Explicit underscore subscripts e.g. C_0, V_0, ω_0, I_1, n_g, r_proton
+      s = s.replace(/\b([A-Za-z\u0370-\u03FF])_([A-Za-z0-9]{1,8})\b/g, "$1<sub>$2</sub>");
+      // Known multi-atom chemical formulas
+      s = s.replace(MULTI_CHEM_RE, m => m.replace(/\d+/g, "<sub>$&</sub>"));
+      // Standalone diatomic/triatomic molecules (without touching C1, C3, C4, G1, F1)
+      s = s.replace(/\b(O2|O3|N2|H2)(?=\b|<sup>|[),.;:])/g, m => m.replace(/\d+/g, "<sub>$&</sub>"));
+      // Ligand / group subscripts e.g. (CN)4, (CN)6, (SO4)3, (CH3)2, [Fe(CN)6]3
+      s = s.replace(/(\((?:CN|SO<sub>4<\/sub>|CH<sub>3<\/sub>|OH|NH<sub>3<\/sub>)\))(\d+)/g, "$1<sub>$2</sub>");
+      s = s.replace(/(\[Fe\(CN\)<sub>6<\/sub>\])(\d+)/g, "$1<sub>$2</sub>");
+      return s;
+    }
+
+    function applyPlainScienceOutsideUrlsAndTokens(escapedStr) {
+      return escapedStr
+        .split(/(@@MTOK_\d+@@|https?:\/\/[^\s<)]+)/g)
+        .map(part => (/^(@@MTOK_\d+@@|https?:\/\/)/.test(part) ? part : beautifyPlainScienceSegment(part)))
+        .join("");
+    }
+
+    function formatInlineMarkdownAndScience(escapedStr) {
+      let s = applyPlainScienceOutsideUrlsAndTokens(escapedStr);
+      // Markdown links [label](https://...)
+      s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a class="resource-link" href="$2" target="_blank" rel="noopener">$1</a>');
+      // Inline code `...`
+      s = s.replace(/`([^`]+)`/g, '<code class="chat-code">$1</code>');
+      // Bold **...** and italic *...*
+      s = s.replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+      s = s.replace(/(^|[\s(])\*([^*\n]+?)\*(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>");
+      return s;
+    }
+
+    function renderInlineRich(rawText) {
+      const { textWithTokens, tokens } = extractMathTokens(rawText || "");
+      let safe = escapeHtml(textWithTokens);
+      safe = formatInlineMarkdownAndScience(safe);
+      safe = safe.replace(/\n/g, "<br>");
+      return restoreMathTokens(safe, tokens);
+    }
+
+    function formatCoachMarkdown(rawText) {
+      const { textWithTokens, tokens } = extractMathTokens(rawText || "");
+      const lines = textWithTokens.split("\n");
+      const outLines = lines.map(line => {
+        const trimmed = line.trim();
+        if (/^#{1,4}\s+/.test(trimmed)) {
+          const headingText = trimmed.replace(/^#{1,4}\s+/, "");
+          return `<div style="font-weight:800;color:var(--navy);margin-top:6px;margin-bottom:2px;">${formatInlineMarkdownAndScience(escapeHtml(headingText))}</div>`;
+        }
+        if (/^>\s?/.test(trimmed)) {
+          const quoteText = trimmed.replace(/^>\s?/, "");
+          return `<div class="chat-blockquote">${formatInlineMarkdownAndScience(escapeHtml(quoteText))}</div>`;
+        }
+        return formatInlineMarkdownAndScience(escapeHtml(line));
+      });
+      const joined = outLines
+        .join("<br>")
+        .replace(/(<\/div>)<br>/g, "$1");
+      return restoreMathTokens(joined, tokens);
+    }
+
+    window.rerenderAllMath = function () {
+      try { renderCurrentQuestion(); } catch (_) {}
+      try { renderChat(); } catch (_) {}
+    };
+
+    function renderChat() {
+      const box = document.getElementById("coach-messages");
+      box.innerHTML = chatHistory.map(m => `
+        <div class="chat-msg ${m.sender === 'student' ? 'student' : 'coach'}">
+          ${m.sender === 'student' ? renderInlineRich(m.text) : formatCoachMarkdown(m.text)}
+        </div>
+      `).join("");
+      box.scrollTop = box.scrollHeight;
+      try { localStorage.setItem(STORAGE_KEYS.chat, JSON.stringify(chatHistory.slice(-40))); } catch (_) {}
+    }
+
+    function clearCoachChat() {
+      chatHistory = [{
+        sender: "coach",
+        text: "Chat cleared. Ask me any NEET Physics, Chemistry, Botany, or Zoology question in **English** or **தமிழ்**."
+      }];
+      renderChat();
+    }
+
+    function askCoachPreset(promptText) {
+      sendCoachMessage(promptText);
+    }
+
+    function handleCoachSubmit(e) {
+      e.preventDefault();
+      const inp = document.getElementById("coach-input");
+      const msg = inp.value.trim();
+      if (!msg) return;
+      inp.value = "";
+      sendCoachMessage(msg);
+    }
+
+    async function callBrowserGeminiDirect(q, userChoice, studentMsg) {
+      if (!profile.custom_gemini_key) return null;
+      const hasTamil = /[\u0B80-\u0BFF]/.test(studentMsg) || /tamil|enna|epdi|sollunga|vilakkam|puriyala/i.test(studentMsg);
+      const langInstruction = hasTamil
+        ? "Respond in clear Tamil Nadu academic Tamil (தமிழ்) with key NCERT English scientific terms in parentheses."
+        : "Respond clearly in English followed by a brief தமிழ் takeaway. Do not use emojis.";
+
+      const prompt = `You are a senior Tamil Nadu NEET-UG Expert Coach tutoring ${profile.name}. ${langInstruction}
+Write mathematical and chemical formulas in clean LaTeX ($...$ for inline, $$...$$ for standalone equations), putting multi-step derivations on separate short lines for mobile readability.
+Active Question (${q ? q.subject + ' - ' + q.chapter : 'General NEET'}):
+Stem (EN): ${q ? q.stem_en : ''}
+Stem (TA): ${q ? q.stem_ta : ''}
+Student Selected: ${userChoice || 'None'} | Correct Option: ${q ? q.correct : ''}
+Verified NCERT Explanation: ${q ? q.explanation_en : ''}
+Tamil Explanation: ${q ? q.explanation_ta : ''}
+Student Question: ${studentMsg}`;
+
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(profile.custom_gemini_key)}`;
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.35, maxOutputTokens: 800 }
+        })
+      });
+      if (!res.ok) return null;
+      const data = await res.json();
+      return data?.candidates?.[0]?.content?.parts?.map(p => p.text || "").join("").trim() || null;
+    }
+
+    function buildSmartOfflineCoachReply(q, userChoice, studentMsg) {
+      if (!q) {
+        return "**NEET-UG Coaching Guide (EN & தமிழ்)**\n\nFocus strictly on **NCERT Class 11 & 12**: Biology carries **360/720 marks**, Chemistry **180**, Physics **180** (+4 correct, -1 wrong).\n\n**தமிழ் குறிப்பு:** உயிரியல் மற்றும் வேதியியலில் NCERT பாடப்புத்தகத்தை வரிக்கு வரி படிக்கவும்; ஊகத்தின் அடிப்படையில் விடையளித்து -1 மதிப்பெண் இழப்பதைத் தவிர்க்கவும்.";
+      }
+      const lower = (studentMsg || "").toLowerCase();
+      const wantsTamil = /[\u0B80-\u0BFF]/.test(studentMsg) || /tamil|enna|epdi|sollunga|vilakkam|puriyala/.test(lower) || profile.language_pref === "ta";
+
+      if (lower.includes("similar") || lower.includes("mcq") || lower.includes("practice")) {
+        const peers = BANK.questions.filter(item => item.subject === q.subject && item.id !== q.id);
+        const pick = peers[Math.floor(Math.random() * peers.length)] || q;
+        const opts = pick.choices.map(c => `(${c.letter}) ${c.text_en}`).join("\n");
+        return `**Practice MCQ — ${pick.subject} (${pick.chapter})**\n\n${pick.stem_en}\n\n**தமிழ்:** ${pick.stem_ta}\n\n${opts}\n\n*(Reply with A, B, C, or D — Verified Answer: **${pick.correct}**, Rule: ${pick.ncert_key_point})*`;
+      }
+
+      if (lower.includes("trap") || lower.includes("wrong") || lower.includes("-1")) {
+        const traps = Object.entries(q.trap_breakdown || {}).map(([k, v]) => `- **Option ${k}:** ${v}`).join("\n");
+        return `**-1 Negative Mark Trap Breakdown (${q.chapter})**\n\n${traps}\n\n**Verified Answer:** **Option ${q.correct}**\n**தமிழ் விளக்கம்:** ${q.explanation_ta}`;
+      }
+
+      if (lower.includes("shortcut") || lower.includes("trick") || lower.includes("topper")) {
+        return `**NCERT Topper Rule — ${q.subject} (${q.chapter})**\n\n**Shortcut:** ${q.ncert_key_point}\n\n**Reference:** ${q.ncertRef}\n**தமிழ் விளக்கம்:** ${q.explanation_ta}`;
+      }
+
+      if (wantsTamil) {
+        return `**${q.subject} — ${q.chapter} (${q.ncertRef})**\n\n**தமிழ் விளக்கம்:** ${q.explanation_ta}\n\n**சரியான விடை:** **விருப்பம் ${q.correct}**\n\n**NCERT Key Rule:** ${q.ncert_key_point}`;
+      }
+
+      const selNote = userChoice
+        ? (userChoice === q.correct
+          ? `Your selected bubble **${userChoice}** is **Correct (+4 Marks)**.\n\n`
+          : `Your selected bubble **${userChoice}** triggers a **-1 Trap**: ${(q.trap_breakdown || {})[userChoice] || "Incorrect option."}\n\n`)
+        : "";
+
+      return `**${q.subject} — ${q.chapter}** (${q.ncertRef})\n\n${selNote}**Step-by-Step NCERT Solution:** ${q.explanation_en}\n\n**தமிழ் விளக்கம்:** ${q.explanation_ta}\n\n**Topper Rule:** ${q.ncert_key_point} | **Correct Bubble:** **${q.correct}**`;
+    }
+
+    async function sendCoachMessage(studentMsg) {
+      if (isFreePreviewVisitor()) {
+        openAccessGateModal("Enter your Name &amp; Email below to unlock your 24/7 Bilingual (தமிழ் + English) Gemini AI Coach immediately — 100% free.");
+        return;
+      }
+      const q = getCurrentQ();
+      const globalNum = q ? (state.questionIds.indexOf(q.id) + 1) : 1;
+      const userChoice = q ? (state.answers[q.id] || "") : "";
+
+      chatHistory.push({ sender: "student", text: studentMsg });
+      chatHistory.push({ sender: "coach", text: "Thinking with Gemini NCERT Coach..." });
+      renderChat();
+
+      let replyText = null;
+
+      // Tier 1: Direct Browser Gemini API if student/owner set an API key on device
+      if (profile.custom_gemini_key) {
+        try { replyText = await callBrowserGeminiDirect(q, userChoice, studentMsg); } catch (_) {}
+      }
+
+      // Tier 2: Backend Server / Cloudflare Tunnel Gemini Engine
+      if (!replyText) {
+        try {
+          const ctrl = new AbortController();
+          setTimeout(() => ctrl.abort(), 40000);
+          const res = await fetch(`${getApiBase()}/api/chat`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Access-Code": getAccessCode(),
+              "X-Device-Id": getDeviceId(),
+              "X-Gemini-Key": profile.custom_gemini_key || ""
+            },
+            signal: ctrl.signal,
+            body: JSON.stringify({
+              student_id: profile.student_id,
+              student_name: profile.name,
+              access_code: getAccessCode(),
+              device_id: getDeviceId(),
+              question_data: q,
+              question_number: globalNum,
+              user_choice: userChoice,
+              student_message: studentMsg,
+              language_pref: profile.language_pref,
+              chat_history: chatHistory.slice(0, -1)
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            replyText = data.reply;
+            trackNeetEvent("ai_coach_query", { subject: q ? q.subject : "General" });
+          } else if (res.status === 403 || res.status === 429) {
+            const errData = await res.json().catch(() => ({}));
+            replyText = errData.reply || (`**Access Pass Required:** ${errData.error || "Please verify your student access code."}`);
+            if (errData.auth_required) {
+              document.getElementById("access-gate-modal").classList.add("open");
+            }
+          }
+        } catch (_) {}
+      }
+
+      // Tier 3: Instant Offline Bilingual NCERT Coach
+      if (!replyText) {
+        replyText = buildSmartOfflineCoachReply(q, userChoice, studentMsg);
+      }
+
+      chatHistory.pop();
+      chatHistory.push({ sender: "coach", text: replyText });
+      renderChat();
+    }
+
+    /* SCORE TRACKER & WHATSAPP SHARE */
+    async function getCombinedAttempts() {
+      let serverAttempts = [];
+      try {
+        const ctrl = new AbortController();
+        setTimeout(() => ctrl.abort(), 4000);
+        const res = await fetch(`${getApiBase()}/api/scores?all=1`, { signal: ctrl.signal });
+        if (res.ok) {
+          const data = await res.json();
+          serverAttempts = data.attempts || [];
+          if (data.summary?.mistake_question_ids?.length) addMistakeIds(data.summary.mistake_question_ids);
+        }
+      } catch (_) {}
+
+      let localAttempts = [];
+      try { localAttempts = JSON.parse(localStorage.getItem(STORAGE_KEYS.localAttempts) || "[]"); } catch (_) {}
+
+      if (serverAttempts.length > 0) return serverAttempts;
+      return localAttempts;
+    }
+
+    async function copyWhatsAppScoreReport() {
+      const attempts = await getCombinedAttempts();
+      const latest = state.submittedResult || attempts[0];
+      if (!latest) {
+        alert("Complete at least one Mock or Practice test first to copy a score report.");
+        return;
+      }
+      const sb = Object.entries(latest.subject_breakdown || {})
+        .map(([s, v]) => `${s}: ${v.score}/${v.max_score}`)
+        .join(" | ");
+      const report = [
+        `TN NEET-UG Score Report (${latest.student_name || profile.name})`,
+        `Paper: ${latest.module_title}`,
+        `Projected Score: ${latest.projected_720} / 720 (Raw: ${latest.raw_score}/${latest.max_score})`,
+        `Correct: ${latest.correct_count} (+4) | Wrong: ${latest.wrong_count} (-${latest.negative_marks_lost}) | Accuracy: ${latest.accuracy_pct}%`,
+        sb ? `Subjects: ${sb}` : "",
+        `Benchmark: ${latest.tn_college_tier}`
+      ].filter(Boolean).join("\n");
+
+      try {
+        await navigator.clipboard.writeText(report);
+        const btn = document.getElementById("copy-report-btn");
+        if (btn) {
+          const orig = btn.textContent;
+          btn.textContent = "Copied to Clipboard!";
+          setTimeout(() => { btn.textContent = orig; }, 2200);
+        }
+      } catch (_) {
+        prompt("Copy your NEET Score Summary:", report);
+      }
+    }
+
+    async function refreshScoreDashboard() {
+      const attempts = await getCombinedAttempts();
+      const totalAtt = attempts.length;
+      const best720 = totalAtt ? Math.max(...attempts.map(a => a.projected_720 || 0)) : 0;
+      const avg720 = totalAtt ? Math.round(attempts.reduce((s, a) => s + (a.projected_720 || 0), 0) / totalAtt) : 0;
+      const negLost = attempts.reduce((s, a) => s + (a.negative_marks_lost || 0), 0);
+      const mistakeCnt = getMistakeIds().length;
+
+      document.getElementById("tracker-kpis").innerHTML = `
+        <div class="kpi-card">
+          <div class="kpi-label">Tests Completed</div>
+          <div class="kpi-value">${totalAtt}</div>
+          <div class="kpi-note">Exemption Goal: ${profile.target_score}%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Best Projected Score</div>
+          <div class="kpi-value" style="color:var(--primary);">${best720}%</div>
+          <div class="kpi-note">Avg: ${avg720}% (Pass: 50% Agg)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">-1 Negative Marks</div>
+          <div class="kpi-value" style="color:var(--rose);">-${negLost}</div>
+          <div class="kpi-note">Avoid blind guesses</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Mistake Queue</div>
+          <div class="kpi-value" style="color:var(--amber);">${mistakeCnt} Qs</div>
+          <div class="kpi-note">Tap Practice Mistake Bank</div>
+        </div>
+      `;
+
+      const trendEl = document.getElementById("score-trend-svg");
+      if (totalAtt === 0) {
+        trendEl.innerHTML = `<div style="color:var(--text-muted);font-size:13px;margin:auto;text-align:center;">Complete your first Mock or Practice test to unlock your 720-scale chart.</div>`;
+      } else {
+        const chron = [...attempts].slice(0, 10).reverse();
+        trendEl.innerHTML = chron.map((a, idx) => {
+          const pct = Math.max(8, Math.max(8, Math.min(100, Math.round(Math.max(0, a.projected_720)))));
+          const color = a.projected_720 >= profile.target_score ? "#047857" : "#0f766e";
+          return `
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;">
+              <div style="font-size:10.5px;font-weight:800;margin-bottom:4px;">${a.projected_720}</div>
+              <div style="width:100%;max-width:40px;height:${pct}%;background:${color};border-radius:6px 6px 0 0;"></div>
+              <div style="font-size:10px;color:var(--text-muted);margin-top:5px;">#${idx + 1}</div>
+            </div>
+          `;
+        }).join("");
+      }
+
+      const rollup = { 'CA Foundation': { c: 0, t: 0 }, 'CA Inter G1': { c: 0, t: 0 }, 'CA Inter G2': { c: 0, t: 0 }, 'CA Final & SPOM': { c: 0, t: 0 } };
+      attempts.forEach(a => {
+        const sb = a.subject_breakdown || {};
+        Object.keys(rollup).forEach(s => {
+          if (sb[s]) { rollup[s].c += sb[s].correct || 0; rollup[s].t += sb[s].total || 0; }
+        });
+      });
+
+      document.getElementById("subject-mastery-bars").innerHTML = Object.entries(rollup).map(([s, v]) => {
+        const pct = v.t > 0 ? Math.round((v.c / v.t) * 100) : 0;
+        return `
+          <div class="subj-bar-row">
+            <div class="subj-bar-top"><span>${s}</span><span>${v.c}/${v.t} (${pct}%)</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+          </div>
+        `;
+      }).join("");
+
+      const tbody = document.getElementById("attempts-table-body");
+      const mCards = document.getElementById("mobile-attempt-cards");
+
+      if (totalAtt === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:20px;">No exam attempts recorded yet.</td></tr>`;
+        mCards.innerHTML = `<div style="text-align:center;color:var(--text-muted);font-size:13px;padding:12px;">No exam attempts recorded yet.</div>`;
+      } else {
+        tbody.innerHTML = attempts.map(a => `
+          <tr>
+            <td>${escapeHtml(a.created_at || "")}</td>
+            <td><strong>${escapeHtml(a.student_name || "")}</strong></td>
+            <td>${escapeHtml(a.module_title || "")}</td>
+            <td><strong>${a.raw_score}/${a.max_score}</strong></td>
+            <td><strong style="color:var(--primary);">${a.projected_720}%</strong></td>
+            <td>${a.correct_count}C / ${a.wrong_count}W / ${a.unanswered_count}B (${a.accuracy_pct}%)</td>
+            <td style="color:var(--rose);font-weight:700;">-${a.negative_marks_lost}</td>
+            <td style="font-size:12px;">${escapeHtml(a.tn_college_tier || "")}</td>
+            <td><button class="btn-outline" style="padding:4px 9px;font-size:11px;" onclick="loadSelectedModule('${escapeHtml(a.module_id)}'); switchMobilePane('question');">Retake</button></td>
+          </tr>
+        `).join("");
+
+        mCards.innerHTML = attempts.map(a => `
+          <div class="m-attempt-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+              <strong style="font-size:13.5px;color:var(--navy);">${a.projected_720}%</strong>
+              <span style="font-size:11px;color:var(--text-muted);">${escapeHtml(a.created_at || "")}</span>
+            </div>
+            <div style="font-size:12.5px;font-weight:600;margin-bottom:4px;">${escapeHtml(a.module_title || "")}</div>
+            <div style="font-size:12px;color:var(--text-sec);margin-bottom:6px;">
+              Raw: <strong>${a.raw_score}/${a.max_score}</strong> • ${a.correct_count}C / ${a.wrong_count}W (-${a.negative_marks_lost}) • Acc: ${a.accuracy_pct}%
+            </div>
+            <div style="font-size:11.5px;color:var(--primary);font-weight:600;margin-bottom:8px;">${escapeHtml(a.tn_college_tier || "")}</div>
+            <button class="btn-outline" style="width:100%;padding:7px;font-size:12px;" onclick="loadSelectedModule('${escapeHtml(a.module_id)}'); switchMobilePane('question');">Retake Paper</button>
+          </div>
+        `).join("");
+      }
+    }
+
+    /* PAST PAPERS, NCERT EXEMPLAR & COACHING ARCHIVE HUB (2000-2026) */
+    let currentPyqPaperFilter = "all";
+
+    function renderPyqArchiveHub() {
+      const meta = PYQ_ARCHIVE.metadata || {};
+      const analytics = PYQ_ARCHIVE.analytics || {};
+      const kpiWrap = document.getElementById("pyq-overview-kpis");
+      if (!kpiWrap) return;
+
+      const totalPyq = meta.totalQuestions || (PYQ_ARCHIVE.questions || []).length;
+      const officialPyq = meta.officialPyqQuestions || 5968;
+      const exCoachCount = meta.exemplarAndCoachingQuestions || 1436;
+      const totalPapers = meta.totalPapers || 40;
+      const subjCounts = meta.subjectCounts || analytics.subjectTotals || {};
+
+      kpiWrap.innerHTML = `
+        <div class="kpi-card">
+          <div class="kpi-label">Total ICAI Questions</div>
+          <div class="kpi-value" style="color:var(--primary);">${BANK.questions.length.toLocaleString()}</div>
+          <div class="kpi-note">Foundation • Inter G1 &amp; G2 • Final &amp; SPOM</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">ICAI Past Papers &amp; RTPs</div>
+          <div class="kpi-value">${Object.keys(BANK.modules).length} Modules</div>
+          <div class="kpi-note">2019–2026 Past Cycles, RTPs, MTPs &amp; Case Scenarios</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Foundation &amp; Inter G1</div>
+          <div class="kpi-value">${((subjCounts["CA Foundation"] || 0) + (subjCounts["CA Inter G1"] || 0)).toLocaleString()}</div>
+          <div class="kpi-note">Foundation: ${subjCounts["CA Foundation"] || 0} • Inter G1: ${subjCounts["CA Inter G1"] || 0}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Inter G2 &amp; Final/SPOM</div>
+          <div class="kpi-value">${((subjCounts["CA Inter G2"] || 0) + (subjCounts["CA Final & SPOM"] || 0)).toLocaleString()}</div>
+          <div class="kpi-note">Inter G2: ${subjCounts["CA Inter G2"] || 0} • Final/SPOM: ${subjCounts["CA Final & SPOM"] || 0}</div>
+        </div>
+      `;
+
+      const sprintWrap = document.getElementById("pyq-sprint-cards");
+      if (sprintWrap) {
+        const sprintIds = Object.keys(BANK.modules).filter(id => !BANK.modules[id].isPastPaper || BANK.modules[id].isControversialModule).slice(0, 10);
+        sprintWrap.innerHTML = sprintIds.map(id => {
+          const m = BANK.modules[id];
+          if (!m) return "";
+          const badge = id === "pyq_controversial_2024_2026"
+            ? "NTA BONUS / MULTI-KEY / SUPREME COURT"
+            : (m.isExemplarOrCoaching
+              ? "NCERT EXEMPLAR / LINE-BY-LINE / COACHING MOCK"
+              : `27-YEAR ${escapeHtml((m.targetSubject || "").toUpperCase())} PYQ POOL`);
+          return `
+            <div class="resource-item" style="display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="font-size:10.5px;font-weight:800;color:var(--primary);margin-bottom:4px;">${badge}</div>
+                <h4>${escapeHtml(m.title)}</h4>
+                <p style="margin-bottom:10px;">${escapeHtml(m.description || "")}</p>
+              </div>
+              <button class="btn-primary" style="width:100%;font-size:12px;" onclick="loadSelectedModule('${escapeHtml(m.id)}'); switchMobilePane('question');">Start Module &rarr;</button>
+            </div>
+          `;
+        }).join("");
+      }
+
+      filterPyqPaperCards(currentPyqPaperFilter);
+
+      const yearTbody = document.getElementById("pyq-year-format-tbody");
+      if (yearTbody && analytics.questionTypeByYear) {
+        const years = Object.keys(analytics.questionTypeByYear).filter(yr => Number(yr) >= 2013).sort((a, b) => Number(b) - Number(a));
+        yearTbody.innerHTML = years.map(yr => {
+          const r = analytics.questionTypeByYear[yr] || {};
+          const qt = r.counts || {};
+          const paperId = yr === "2026" ? "pyq_reneet_2026" : (yr === "2022" ? "pyq_2022_p1" : (yr === "2016" ? "pyq_2016_p1" : (yr === "2015" ? "pyq_2015_re" : `pyq_${yr}`)));
+          return `
+            <tr>
+              <td><a href="javascript:void(0)" style="color:var(--primary);font-weight:700;text-decoration:none;" onclick="loadSelectedModule('${escapeHtml(paperId)}'); switchMobilePane('question');">NEET ${escapeHtml(yr)}</a></td>
+              <td><strong>${r.total || 0}</strong></td>
+              <td>${qt["Direct NCERT Concept"] || qt["Direct Concept"] || 0}</td>
+              <td>${qt["Numerical / Formula"] || 0}</td>
+              <td><strong>${qt["Match List-I & II"] || 0}</strong></td>
+              <td><strong>${qt["Statement I & II"] || 0}</strong></td>
+              <td><strong>${qt["Assertion-Reason"] || 0}</strong></td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      const chapWrap = document.getElementById("pyq-top-chapters-wrap");
+      if (chapWrap && analytics.topChaptersBySubject) {
+        chapWrap.innerHTML = ["CA Foundation", "CA Inter G1", "CA Inter G2", "CA Final & SPOM"].map(subj => {
+          const list = (analytics.topChaptersBySubject[subj] || []).slice(0, 4);
+          const pills = list.map(item => `<span class="badge" style="margin:2px 4px 2px 0;">${escapeHtml(item.chapter)} (${item.count})</span>`).join("");
+          return `
+            <div style="margin-bottom:10px;">
+              <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:4px;">${subj} Top NCERT Chapters:</div>
+              <div>${pills}</div>
+            </div>
+          `;
+        }).join("");
+      }
+
+      const dossierGrid = document.getElementById("pyq-disputed-dossier-grid");
+      const dList = PYQ_ARCHIVE.disputedQuestionsDossier || analytics.disputedQuestionsDossier || [];
+      if (dossierGrid && Array.isArray(dList)) {
+        dossierGrid.innerHTML = dList.map(d => `
+          <div class="resource-item">
+            <div style="font-size:10.5px;font-weight:800;color:var(--rose);margin-bottom:4px;">${escapeHtml(d.exam || "")}</div>
+            <h4>${escapeHtml(d.qNum || d.questionRef || "")}</h4>
+            <p style="margin-bottom:6px;"><strong>Dispute / Context:</strong> ${escapeHtml(d.summary || d.issue || "")}</p>
+            <p style="margin-bottom:6px;"><strong>Official Key / Ruling:</strong> ${escapeHtml(d.acceptedKey || d.resolution || "")}</p>
+            <div style="font-size:11.5px;color:var(--primary);font-weight:700;">Status: ${escapeHtml(d.status || d.takeaway || "")}</div>
+          </div>
+        `).join("");
+      }
+    }
+
+    function filterPyqPaperCards(filterKey) {
+      currentPyqPaperFilter = filterKey;
+      ["all", "recent", "ta", "classic", "aipmt"].forEach(k => {
+        const btn = document.getElementById(`pyq-filter-${k}`);
+        if (btn) btn.classList.toggle("active", k === filterKey);
+      });
+      const wrap = document.getElementById("pyq-paper-cards");
+      if (!wrap) return;
+      const papers = Object.values(BANK.modules).filter(m => m.isPastPaper && !m.isControversialModule);
+      const filtered = papers.filter(m => {
+        const isTa = m.paperLanguage === "ta" || m.id.includes("_ta");
+        if (filterKey === "recent") return !isTa && (m.examYear || 0) >= 2024;
+        if (filterKey === "ta") return isTa;
+        if (filterKey === "classic") return !isTa && (m.examYear || 0) < 2024;
+        if (filterKey === "aipmt") return Boolean(m.isExemplarOrCoaching || m.id.includes("rtp") || m.id.includes("spom") || m.id.includes("ibs"));
+        return true;
+      });
+      wrap.innerHTML = filtered.map(m => {
+        const qCount = (m.questionIds || []).length;
+        const isTa = m.paperLanguage === "ta" || m.id.startsWith("pyq_ta_") || m.id.endsWith("_ta");
+        return `
+          <div class="resource-item" style="display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="font-size:10.5px;font-weight:800;color:${isTa ? "var(--amber)" : "var(--primary)"};margin-bottom:4px;">
+                ${isTa ? "OFFICIAL NTA தமிழ் + EN BOOKLET" : `OFFICIAL ${m.examYear || ""} EXAM PAPER`} • ${qCount} Qs
+              </div>
+              <h4>${escapeHtml(m.title)}</h4>
+              <p style="margin-bottom:10px;">${escapeHtml(m.description || "")}</p>
+            </div>
+            <button class="btn-outline" style="width:100%;font-size:12px;border-color:var(--primary);color:var(--primary);" onclick="loadSelectedModule('${escapeHtml(m.id)}'); switchMobilePane('question');">Solve Official Paper (${qCount} Qs) &rarr;</button>
+          </div>
+        `;
+      }).join("");
+    }
+
+    /* VIEW & MOBILE NAVIGATION */
+    function switchView(viewName) {
+      if (isFreePreviewVisitor() && viewName === "pyq") {
+        openAccessGateModal("Enter your Name &amp; Email below to unlock the complete 27-Year NEET Past Paper &amp; NCERT Exemplar Archive (7,484 Questions) immediately.");
+        return;
+      }
+      document.querySelectorAll(".nav-tab").forEach(b => b.classList.toggle("active", b.dataset.view === viewName));
+      document.getElementById("view-workspace").classList.toggle("active", viewName === "workspace");
+      const pyqEl = document.getElementById("view-pyq");
+      if (pyqEl) pyqEl.classList.toggle("active", viewName === "pyq");
+      document.getElementById("view-tracker").classList.toggle("active", viewName === "tracker");
+      document.getElementById("view-guide").classList.toggle("active", viewName === "guide");
+      if (viewName === "tracker") refreshScoreDashboard();
+      if (viewName === "pyq") renderPyqArchiveHub();
+    }
+
+    function switchMobilePane(target) {
+      document.querySelectorAll(".m-nav-btn").forEach(b => b.classList.toggle("active", b.dataset.mnav === target));
+      if (target === "tracker") {
+        switchView("tracker");
+      } else if (target === "pyq") {
+        switchView("pyq");
+      } else if (target === "guide") {
+        switchView("guide");
+      } else {
+        switchView("workspace");
+        document.getElementById("workspace-layout").setAttribute("data-mobile-pane", target);
+      }
+    }
+
+    function setLanguageMode(mode) {
+      profile.language_pref = mode;
+      localStorage.setItem(STORAGE_KEYS.profile, JSON.stringify(profile));
+      renderCurrentQuestion();
+    }
+
+    function openProfileModal() {
+      document.getElementById("prof-name").value = profile.name || "";
+      document.getElementById("prof-district").value = profile.district || "Chennai";
+      document.getElementById("prof-board").value = profile.board || "TN State Board (Samacheer Kalvi)";
+      document.getElementById("prof-quota").value = profile.quota_category || "BC (85% TN State Quota)";
+      document.getElementById("prof-target").value = profile.target_score || 650;
+      document.getElementById("prof-gemini-key").value = profile.custom_gemini_key || "";
+      document.getElementById("profile-modal").classList.add("open");
+    }
+
+    function closeProfileModal() { document.getElementById("profile-modal").classList.remove("open"); }
+
+    function logoutStudentAccess() {
+      try {
+        localStorage.removeItem(STORAGE_KEYS.accessCode);
+        localStorage.removeItem(STORAGE_KEYS.pendingToken);
+        localStorage.removeItem("tn_neet_pending_email_v1");
+      } catch (_) {}
+      if (pendingPollTimer) {
+        clearInterval(pendingPollTimer);
+        pendingPollTimer = null;
+      }
+      closeProfileModal();
+      document.getElementById("gate-code-input").value = "";
+      document.getElementById("gate-lookup-email").value = "";
+      switchAccessGateTab("code");
+      syncFreePreviewBanner();
+      document.getElementById("access-gate-modal").classList.add("open");
+      showGateFeedback("gate-code-feedback", "You have signed out on this device. Enter your registered email or access code to sign back in.", true);
+    }
+
+    /* STUDENT ACCESS CODE GATE, 3-QUESTION FREE PREVIEW & ADMIN CONSOLE */
+    let pendingPollTimer = null;
+    let enforceGateActive = true;
+    const FREE_PREVIEW_QUESTION_LIMIT = 3;
+
+    function isFreePreviewVisitor() {
+      return Boolean(enforceGateActive && !getAccessCode());
+    }
+
+    function syncFreePreviewBanner() {
+      const banner = document.getElementById("free-preview-banner");
+      if (!banner) return;
+      banner.style.display = isFreePreviewVisitor() ? "flex" : "none";
+    }
+
+    function openAccessGateModal(reasonHtml) {
+      const msgEl = document.getElementById("gate-context-msg");
+      if (msgEl && reasonHtml) {
+        msgEl.innerHTML = reasonHtml;
+      }
+      const hasPending = Boolean(localStorage.getItem(STORAGE_KEYS.pendingToken) || localStorage.getItem("tn_neet_pending_email_v1"));
+      switchAccessGateTab(hasPending ? "code" : "request");
+      document.getElementById("access-gate-modal").classList.add("open");
+      setTimeout(() => {
+        const focusEl = document.getElementById(hasPending ? "gate-lookup-email" : "req-name");
+        if (focusEl) focusEl.focus();
+      }, 80);
+    }
+
+    function closeAccessGateToPreview() {
+      document.getElementById("access-gate-modal").classList.remove("open");
+      if (isFreePreviewVisitor() && state.currentIndex >= FREE_PREVIEW_QUESTION_LIMIT) {
+        state.currentIndex = 0;
+        renderOMRPalette();
+        renderCurrentQuestion();
+      }
+      syncFreePreviewBanner();
+    }
+
+    function selectGateRolePill(btn) {
+      const role = btn.getAttribute("data-role") || "NEET Student (Class 11/12/Dropper)";
+      const inp = document.getElementById("req-purpose");
+      if (inp) inp.value = role;
+      document.querySelectorAll("#req-role-pills .role-pill-btn").forEach(b => {
+        const active = b === btn;
+        b.style.border = active ? "1.5px solid #0f766e" : "1px solid var(--border)";
+        b.style.background = active ? "#f0fdfa" : "#ffffff";
+        b.style.color = active ? "#0f766e" : "var(--text-sec)";
+        b.style.fontWeight = active ? "800" : "700";
+      });
+    }
+
+    function switchAccessGateTab(tab) {
+      const codePane = document.getElementById("gate-pane-code");
+      const reqPane = document.getElementById("gate-pane-request");
+      const codeBtn = document.getElementById("gate-tab-code-btn");
+      const reqBtn = document.getElementById("gate-tab-req-btn");
+      if (tab === "request") {
+        codePane.style.display = "none";
+        reqPane.style.display = "block";
+        reqBtn.style.background = "#0f766e";
+        reqBtn.style.color = "#ffffff";
+        codeBtn.style.background = "transparent";
+        codeBtn.style.color = "#334155";
+      } else {
+        codePane.style.display = "block";
+        reqPane.style.display = "none";
+        codeBtn.style.background = "#0f766e";
+        codeBtn.style.color = "#ffffff";
+        reqBtn.style.background = "transparent";
+        reqBtn.style.color = "#334155";
+      }
+    }
+
+    function showGateFeedback(elId, msg, isSuccess) {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      el.style.display = "block";
+      el.style.background = isSuccess ? "#ecfdf5" : "#fff1f2";
+      el.style.border = isSuccess ? "1px solid #10b981" : "1px solid #f43f5e";
+      el.style.color = isSuccess ? "#065f46" : "#9f1239";
+      el.innerHTML = msg;
+    }
+
+    function unlockAppWithAccessCode(code, studentName, district) {
+      const cleanCode = String(code || "").trim().toUpperCase();
+      if (!cleanCode) return;
+      try {
+        localStorage.setItem(STORAGE_KEYS.accessCode, cleanCode);
+        localStorage.removeItem(STORAGE_KEYS.pendingToken);
+      } catch (_) {}
+      if (pendingPollTimer) {
+        clearInterval(pendingPollTimer);
+        pendingPollTimer = null;
+      }
+      if (studentName && studentName !== "Approved User" && (!profile.name || profile.name === "NEET Aspirant")) {
+        profile.name = studentName;
+        if (district) profile.district = district;
+        try { localStorage.setItem(STORAGE_KEYS.profile, JSON.stringify(profile)); } catch (_) {}
+        updateProfilePill();
+      }
+      document.getElementById("access-gate-modal").classList.remove("open");
+      syncFreePreviewBanner();
+      renderCurrentQuestion();
+    }
+
+    async function verifyCodeWithServer(code, silentIfValid) {
+      const cleanCode = String(code || "").trim().toUpperCase();
+      if (!cleanCode) return { valid: false, reason: "Please enter your access code." };
+      try {
+        const res = await apiFetch(`/api/auth/verify_code`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code: cleanCode, device_id: getDeviceId() })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.valid) {
+          unlockAppWithAccessCode(cleanCode, data.name, data.district);
+          return { valid: true, data };
+        }
+        if (res.status === 403 && getAccessCode() === cleanCode) {
+          try { localStorage.removeItem(STORAGE_KEYS.accessCode); } catch (_) {}
+        }
+        return { valid: false, reason: data.reason || "Invalid or expired access code." };
+      } catch (_) {
+        // If backend is temporarily unreachable and code matches NEET-XXXXXX format, allow cached session
+        if (/^(CA|NEET)-[A-Z0-9]{4,10}$/.test(cleanCode) && silentIfValid) {
+          unlockAppWithAccessCode(cleanCode);
+          return { valid: true, offline: true };
+        }
+        return { valid: false, reason: "Could not reach verification server. Please check your connection." };
+      }
+    }
+
+    async function submitAccessCodeVerify() {
+      const inp = document.getElementById("gate-code-input");
+      const code = (inp.value || "").trim().toUpperCase();
+      if (!code) {
+        showGateFeedback("gate-code-feedback", "Please enter your personal access code (e.g., <code>CA-XXXXXX</code>) or switch to <strong>First Timer? Request Code</strong>.", false);
+        return;
+      }
+      showGateFeedback("gate-code-feedback", "Verifying your access code...", true);
+      const res = await verifyCodeWithServer(code, false);
+      if (res.valid) {
+        showGateFeedback("gate-code-feedback", "Access code verified! Unlocking workspace...", true);
+        trackNeetEvent("code_login_success", { code });
+      } else {
+        showGateFeedback("gate-code-feedback", escapeHtml(res.reason), false);
+      }
+    }
+
+    async function lookupAccessByEmail() {
+      const email = (document.getElementById("gate-lookup-email").value || "").trim().toLowerCase();
+      if (!email || !email.includes("@")) {
+        showGateFeedback("gate-code-feedback", "Please enter the email address you used when requesting access.", false);
+        return;
+      }
+      try {
+        const res = await apiFetch(`/api/auth/check_request?email=${encodeURIComponent(email)}`);
+        if (!res.ok) {
+          showGateFeedback("gate-code-feedback", "No access request found for that email yet. Click <strong>First Timer? Request Code</strong> above to request one!", false);
+          return;
+        }
+        const data = await res.json();
+        if (data.status === "approved" && data.access_code) {
+          document.getElementById("gate-code-input").value = data.access_code;
+          showGateFeedback("gate-code-feedback", `Approved! Your personal code is <strong>${escapeHtml(data.access_code)}</strong>. Signing you in now...`, true);
+          await verifyCodeWithServer(data.access_code, false);
+        } else if (data.status === "pending") {
+          if (data.request_token) {
+            localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token);
+            startPendingApprovalPoll(data.request_token);
+          }
+          showGateFeedback("gate-code-feedback", "Your request is currently <strong>pending approval</strong>. Keep this tab open or check back shortly — as soon as the mentor clicks Approve, your code will appear automatically!", true);
+        } else if (data.status === "revoked" || data.status === "rejected") {
+          try { localStorage.removeItem(STORAGE_KEYS.accessCode); } catch (_) {}
+          showGateFeedback("gate-code-feedback", `Your access is currently <strong>${escapeHtml(data.status)}</strong> by the administrator.`, false);
+        } else {
+          showGateFeedback("gate-code-feedback", `Request status: ${escapeHtml(data.status)}.`, false);
+        }
+      } catch (_) {
+        showGateFeedback("gate-code-feedback", "Unable to check request status right now. Please try again in a moment.", false);
+      }
+    }
+
+    async function submitFirstTimeAccessRequest() {
+      const name = (document.getElementById("req-name").value || "").trim();
+      const email = (document.getElementById("req-email").value || "").trim().toLowerCase();
+      const district = (document.getElementById("req-district").value || "").trim();
+      const purpose = (document.getElementById("req-purpose").value || "NEET Student (Class 11/12/Dropper)").trim();
+
+      if (!name || !email || !email.includes("@")) {
+        showGateFeedback("gate-req-feedback", "Please enter your <strong>Full Name</strong> and a valid <strong>Email Address</strong> to unlock your free pass.", false);
+        return;
+      }
+
+      const btn = document.getElementById("gate-req-submit-btn");
+      btn.disabled = true;
+      btn.textContent = "Unlocking Your Free Pass...";
+
+      try {
+        const res = await apiFetch(`/api/auth/request_access`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, district, purpose })
+        });
+        const data = await res.json().catch(() => ({}));
+        btn.disabled = false;
+        btn.textContent = "Unlock All CA Levels, RTPs & AI Coach Now →";
+
+        if (!res.ok) {
+          showGateFeedback("gate-req-feedback", escapeHtml(data.error || "Could not submit request."), false);
+          return;
+        }
+
+        if (data.status === "approved" && data.access_code) {
+          showGateFeedback("gate-req-feedback", `<strong>Unlocked!</strong> Your personal pass is <code>${escapeHtml(data.access_code)}</code> (also emailed to ${escapeHtml(email)}). Opening full workspace...`, true);
+          unlockAppWithAccessCode(data.access_code, name, district);
+          await verifyCodeWithServer(data.access_code, true);
+          return;
+        }
+
+        if (data.request_token) {
+          try {
+            localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token);
+            localStorage.setItem("tn_neet_pending_email_v1", email);
+          } catch (_) {}
+          startPendingApprovalPoll(data.request_token, email);
+        }
+        showGateFeedback(
+          "gate-req-feedback",
+          `<strong>Request Sent!</strong> Keep this tab open or enter <strong>${escapeHtml(email)}</strong> in the Sign In tab anytime to unlock.`,
+          true
+        );
+      } catch (_) {
+        btn.disabled = false;
+        btn.textContent = "Unlock All CA Levels, RTPs & AI Coach Now →";
+        showGateFeedback("gate-req-feedback", "Network error while creating your pass. Please try again.", false);
+      }
+    }
+
+    async function checkSinglePendingPoll(reqToken, pendingEmail) {
+      try {
+        const q = reqToken
+          ? `request_token=${encodeURIComponent(reqToken)}`
+          : `email=${encodeURIComponent(pendingEmail || "")}`;
+        if (!q || q === "email=") return;
+        const res = await apiFetch(`/api/auth/check_request?${q}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.status === "approved" && data.access_code) {
+          if (pendingPollTimer) {
+            clearInterval(pendingPollTimer);
+            pendingPollTimer = null;
+          }
+          showGateFeedback("gate-req-feedback", `<strong>Approved!</strong> Your personal code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
+          showGateFeedback("gate-code-feedback", `<strong>Approved!</strong> Your personal code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
+          await verifyCodeWithServer(data.access_code, false);
+        }
+      } catch (_) {}
+    }
+
+    function startPendingApprovalPoll(reqToken, pendingEmail) {
+      if (!reqToken && !pendingEmail) return;
+      if (pendingPollTimer) clearInterval(pendingPollTimer);
+      checkSinglePendingPoll(reqToken, pendingEmail);
+      pendingPollTimer = setInterval(() => {
+        checkSinglePendingPoll(reqToken, pendingEmail);
+      }, 4000);
+    }
+
+    async function loadAdminConsoleData() {
+      const adminKey = urlParams.get("admin") || sessionStorage.getItem("tn_neet_admin_key") || "";
+      if (!adminKey) return;
+      sessionStorage.setItem("tn_neet_admin_key", adminKey);
+      document.getElementById("admin-access-modal").classList.add("open");
+      const wrap = document.getElementById("admin-requests-table-wrap");
+      const strip = document.getElementById("admin-analytics-strip");
+      wrap.innerHTML = `<div style="padding:16px;font-size:13px;color:var(--text-sec);">Loading access requests &amp; analytics...</div>`;
+      try {
+        const res = await apiFetch(`/api/auth/admin_list?admin_key=${encodeURIComponent(adminKey)}`);
+        if (!res.ok) {
+          wrap.innerHTML = `<div style="padding:16px;color:var(--rose);font-weight:700;">Invalid Admin Key (403).</div>`;
+          return;
+        }
+        const data = await res.json();
+        const ev = data.analytics_summary || {};
+        const rows = data.requests || [];
+        const pendingCnt = rows.filter(r => r.status === "pending").length;
+        const approvedCnt = rows.filter(r => r.status === "approved").length;
+        const summaryPills = [
+          `<div style="background:${pendingCnt > 0 ? '#fef3c7' : '#f8fafc'};border:1px solid ${pendingCnt > 0 ? '#f59e0b' : 'var(--border)'};padding:6px 10px;border-radius:7px;font-size:11.5px;"><strong style="color:var(--navy);">Pending Approval:</strong> <span style="color:${pendingCnt > 0 ? '#b45309' : 'var(--primary)'};font-weight:800;">${pendingCnt}</span></div>`,
+          `<div style="background:#f0fdfa;border:1px solid #99f6e4;padding:6px 10px;border-radius:7px;font-size:11.5px;"><strong style="color:var(--navy);">Approved Users:</strong> <span style="color:#047857;font-weight:800;">${approvedCnt}</span></div>`,
+          ...Object.entries(ev).filter(([k]) => k !== "access_requested").map(([k, v]) => `
+            <div style="background:#f8fafc;border:1px solid var(--border);padding:6px 10px;border-radius:7px;font-size:11.5px;">
+              <strong style="color:var(--navy);">${escapeHtml(k)}:</strong> <span style="color:var(--primary);font-weight:800;">${v}</span>
+            </div>
+          `)
+        ];
+        strip.innerHTML = summaryPills.join("");
+        if (!rows.length) {
+          wrap.innerHTML = `<div style="padding:16px;font-size:13px;color:var(--text-sec);">No student access requests submitted yet.</div>`;
+          return;
+        }
+        wrap.innerHTML = `
+          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+            <thead>
+              <tr style="background:#f1f5f9;text-align:left;border-bottom:1px solid var(--border);">
+                <th style="padding:8px;">Student</th>
+                <th style="padding:8px;">District &amp; Purpose</th>
+                <th style="padding:8px;">Status / Code</th>
+                <th style="padding:8px;">AI Usage</th>
+                <th style="padding:8px;">1-Click Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(r => `
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:8px;">
+                    <strong>${escapeHtml(r.name)}</strong><br>
+                    <span style="color:var(--text-sec);">${escapeHtml(r.email)}</span>
+                  </td>
+                  <td style="padding:8px;">
+                    <strong>${escapeHtml(r.district || "-")}</strong><br>
+                    <span style="color:var(--text-sec);">${escapeHtml(r.purpose || "-")}</span>
+                  </td>
+                  <td style="padding:8px;">
+                    <span style="font-weight:800;color:${r.status === 'approved' ? '#047857' : (r.status === 'pending' ? '#b45309' : '#be123c')};text-transform:uppercase;">${escapeHtml(r.status)}</span>
+                    ${r.access_code ? `<br><code style="font-weight:800;font-size:12px;">${escapeHtml(r.access_code)}</code>` : ""}
+                  </td>
+                  <td style="padding:8px;">${r.ai_queries_today || 0}/${r.daily_ai_limit || 40} today<br><span style="color:var(--text-muted);">${r.ai_queries_total || 0} total</span></td>
+                  <td style="padding:8px;white-space:nowrap;">
+                    ${r.status !== "approved"
+                      ? `<a href="${escapeHtml(r.approve_url)}" target="_blank" style="background:#047857;color:#fff;text-decoration:none;padding:5px 9px;border-radius:5px;font-weight:700;display:inline-block;">Approve &amp; Send Code</a>`
+                      : `<a href="${escapeHtml(r.revoke_url)}" target="_blank" style="background:#be123c;color:#fff;text-decoration:none;padding:5px 9px;border-radius:5px;font-weight:700;display:inline-block;">Revoke</a>`
+                    }
+                  </td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        `;
+      } catch (_) {
+        wrap.innerHTML = `<div style="padding:16px;color:var(--rose);">Could not load admin console data.</div>`;
+      }
+    }
+
+    async function initAccessGateAndAnalytics() {
+      let enforceGate = true;
+      // Sync GA4 Measurement ID and auth_required flag from server config
+      try {
+        const r = await apiFetch(`/api/public_config`);
+        const cfg = r.ok ? await r.json() : null;
+        if (cfg) {
+          if (cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_neet_ga_id")) {
+            localStorage.setItem("tn_neet_ga_id", cfg.ga_measurement_id);
+            if (typeof window.gtag === "function") {
+              window.gtag("config", cfg.ga_measurement_id, { send_page_view: true });
+            }
+          }
+          if (typeof cfg.auth_required === "boolean" && urlParams.get("gate") !== "1") {
+            enforceGate = cfg.auth_required;
+          }
+        }
+      } catch (_) {}
+
+      trackNeetEvent("page_view", { module: state.moduleId });
+
+      // Check if owner opened ?admin=ADMIN_KEY
+      if (urlParams.get("admin")) {
+        loadAdminConsoleData();
+      }
+
+      // Check if magic link ?code=NEET-XXXXXX was clicked
+      const urlCode = (urlParams.get("code") || "").trim().toUpperCase();
+      if (urlCode) {
+        const check = await verifyCodeWithServer(urlCode, true);
+        if (check.valid) {
+          try {
+            const cleanUrl = new URL(window.location.href);
+            cleanUrl.searchParams.delete("code");
+            window.history.replaceState({}, "", cleanUrl.toString());
+          } catch (_) {}
+          return;
+        }
+      }
+
+      enforceGateActive = enforceGate;
+
+      // Check existing saved code in localStorage
+      const savedCode = getAccessCode();
+      if (savedCode) {
+        const check = await verifyCodeWithServer(savedCode, true);
+        if (check.valid) {
+          syncFreePreviewBanner();
+          return;
+        }
+      }
+
+      if (!enforceGate) {
+        document.getElementById("access-gate-modal").classList.remove("open");
+        syncFreePreviewBanner();
+        return;
+      }
+
+      // 3-Question Free Trial: Start new visitors on Q.1–3 with the Free Preview Banner visible,
+      // and only open the modal immediately if ?gate=1 was explicitly requested in the URL.
+      if (state.currentIndex >= FREE_PREVIEW_QUESTION_LIMIT) {
+        state.currentIndex = 0;
+      }
+      syncFreePreviewBanner();
+      renderOMRPalette();
+      renderCurrentQuestion();
+
+      if (urlParams.get("gate") === "1") {
+        openAccessGateModal();
+      }
+      const pendingTok = localStorage.getItem(STORAGE_KEYS.pendingToken);
+      const pendingEm = localStorage.getItem("tn_neet_pending_email_v1");
+      if (pendingTok || pendingEm) {
+        startPendingApprovalPoll(pendingTok, pendingEm);
+      }
+    }
+
+    // YouTube Embed URL for Introductory Explainer Video (falls back or toggles to built-in 1080p MP4 player)
+    const INTRO_YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/ChJSZgvqAuY?autoplay=1&rel=0";
+    let introUseLocalMp4 = false;
+
+    function openIntroVideoModal() {
+      trackNeetEvent("intro_video_played", {});
+      const modal = document.getElementById("intro-video-modal");
+      const vid = document.getElementById("intro-explainer-player");
+      const yt = document.getElementById("intro-youtube-iframe");
+      const toggleBtn = document.getElementById("toggle-video-source-btn");
+      modal.classList.add("open");
+      if (INTRO_YOUTUBE_EMBED_URL && !introUseLocalMp4) {
+        vid.style.display = "none";
+        try { vid.pause(); } catch (_) {}
+        yt.style.display = "block";
+        yt.src = INTRO_YOUTUBE_EMBED_URL;
+        if (toggleBtn) toggleBtn.textContent = "Use Built-in MP4 Player";
+      } else {
+        if (yt) { yt.style.display = "none"; yt.src = ""; }
+        vid.style.display = "block";
+        try { vid.play(); } catch (_) {}
+        if (toggleBtn) toggleBtn.textContent = "Switch to YouTube Player";
+      }
+    }
+
+    function toggleIntroVideoPlayerSource() {
+      introUseLocalMp4 = !introUseLocalMp4;
+      openIntroVideoModal();
+    }
+
+    function closeIntroVideoModal() {
+      const modal = document.getElementById("intro-video-modal");
+      const vid = document.getElementById("intro-explainer-player");
+      const yt = document.getElementById("intro-youtube-iframe");
+      modal.classList.remove("open");
+      try { vid.pause(); } catch (_) {}
+      if (yt) yt.src = "";
+    }
+
+    async function saveProfile() {
+      profile.name = document.getElementById("prof-name").value.trim() || "NEET Aspirant";
+      profile.district = document.getElementById("prof-district").value.trim() || "Chennai";
+      profile.board = document.getElementById("prof-board").value;
+      profile.quota_category = document.getElementById("prof-quota").value;
+      profile.target_score = Number(document.getElementById("prof-target").value) || 650;
+      profile.custom_gemini_key = document.getElementById("prof-gemini-key").value.trim();
+
+      localStorage.setItem(STORAGE_KEYS.profile, JSON.stringify(profile));
+      updateProfilePill();
+      closeProfileModal();
+      checkServerHealth();
+
+      try {
+        await fetch(`${getApiBase()}/api/profile`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            student_id: profile.student_id,
+            name: profile.name,
+            district: profile.district,
+            board: profile.board,
+            quota_category: profile.quota_category,
+            language_pref: profile.language_pref,
+            target_score: profile.target_score
+          })
+        });
+      } catch (_) {}
+    }
+
+    function updateProfilePill() {
+      document.getElementById("profile-pill-btn").textContent =
+        `${profile.name} (${profile.target_score})`;
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY !== 0 || window.scrollX !== 0) {
+        window.scrollTo(0, 0);
+      }
+    }, { passive: true });
+
+    window.addEventListener("DOMContentLoaded", initApp);
+  </script>
+</body>
+</html>

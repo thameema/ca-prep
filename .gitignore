@@ -1,0 +1,6 @@
+ca_data.db
+ca_data.db-*
+__pycache__/
+*.pyc
+.DS_Store
+student_score_ledger.json
