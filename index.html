@@ -1804,8 +1804,8 @@
       <div id="intro-video-container" style="position:relative;width:100%;border-radius:10px;overflow:hidden;background:#070d19;border:1px solid var(--border);">
         <iframe id="intro-youtube-iframe" style="display:block;width:100%;aspect-ratio:16/9;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <video id="intro-explainer-player" controls preload="metadata" style="width:100%;max-height:70vh;display:none;">
-          <source src="video/tamil_nadu_neet_explainer.mp4" type="video/mp4" />
-          <track label="English Subtitles" kind="subtitles" srclang="en" src="video/tamil_nadu_neet_explainer_en.vtt" default />
+          <source src="video/tamil_nadu_ca_explainer.mp4" type="video/mp4" />
+          <track label="English Subtitles" kind="subtitles" srclang="en" src="video/tamil_nadu_ca_explainer_en.vtt" default />
           Your browser does not support HTML5 video.
         </video>
       </div>
@@ -1814,9 +1814,8 @@
           <strong>Audio:</strong> தமிழ் (Spoken Tamil Walkthrough) &nbsp;|&nbsp; <strong>Subtitles:</strong> Burned-in English + CC Track
         </div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-          <a href="https://youtu.be/ChJSZgvqAuY" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none;padding:6px 12px;font-size:12px;background:#dc2626;border-color:#dc2626;color:#fff;">Open on YouTube &rarr;</a>
-          <button type="button" id="toggle-video-source-btn" class="btn-outline" style="padding:6px 12px;font-size:12px;" onclick="toggleIntroVideoPlayerSource()">Use Built-in MP4 Player</button>
-          <a href="video/tamil_nadu_neet_explainer.mp4" download="Tamil_Nadu_NEET_720_Mastery_Explainer.mp4" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download MP4</a>
+          <a href="https://www.youtube.com/@icaiorgtube" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none;padding:6px 12px;font-size:12px;background:#0f766e;border-color:#0f766e;color:#fff;">ICAI CA Tube (BoS Live) &rarr;</a>
+          <a href="video/tamil_nadu_ca_explainer.mp4" download="Tamil_Nadu_ICAI_CA_Mastery_Explainer.mp4" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download MP4</a>
         </div>
       </div>
     </div>
@@ -2911,13 +2910,13 @@
         ? "Respond in clear Tamil Nadu academic Tamil (தமிழ்) with key NCERT English scientific terms in parentheses."
         : "Respond clearly in English followed by a brief தமிழ் takeaway. Do not use emojis.";
 
-      const prompt = `You are a senior Tamil Nadu NEET-UG Expert Coach tutoring ${profile.name}. ${langInstruction}
+      const prompt = `You are a senior Tamil Nadu ICAI Chartered Accountancy (CA) Faculty & Coach tutoring ${profile.name}. ${langInstruction}
 Write mathematical and chemical formulas in clean LaTeX ($...$ for inline, $$...$$ for standalone equations), putting multi-step derivations on separate short lines for mobile readability.
-Active Question (${q ? q.subject + ' - ' + q.chapter : 'General NEET'}):
+Active Question (${q ? q.subject + ' - ' + q.chapter : 'General ICAI CA'}):
 Stem (EN): ${q ? q.stem_en : ''}
 Stem (TA): ${q ? q.stem_ta : ''}
 Student Selected: ${userChoice || 'None'} | Correct Option: ${q ? q.correct : ''}
-Verified NCERT Explanation: ${q ? q.explanation_en : ''}
+Verified ICAI Statutory / Working Note Solution: ${q ? q.explanation_en : ''}
 Tamil Explanation: ${q ? q.explanation_ta : ''}
 Student Question: ${studentMsg}`;
 
@@ -2937,7 +2936,7 @@ Student Question: ${studentMsg}`;
 
     function buildSmartOfflineCoachReply(q, userChoice, studentMsg) {
       if (!q) {
-        return "**NEET-UG Coaching Guide (EN & தமிழ்)**\n\nFocus strictly on **NCERT Class 11 & 12**: Biology carries **360/720 marks**, Chemistry **180**, Physics **180** (+4 correct, -1 wrong).\n\n**தமிழ் குறிப்பு:** உயிரியல் மற்றும் வேதியியலில் NCERT பாடப்புத்தகத்தை வரிக்கு வரி படிக்கவும்; ஊகத்தின் அடிப்படையில் விடையளித்து -1 மதிப்பெண் இழப்பதைத் தவிர்க்கவும்.";
+        return "**ICAI CA New Scheme Coaching Guide (EN & தமிழ்)**\n\nFocus on **ICAI BoS Study Material, RTPs & MTPs**: Minimum **40% per paper**, **50% Group Aggregate**, and **60%+ for 3-Attempt Paper Exemption** (+1/-0.25 in Foundation P3/P4; 30% Case-Scenario MCQs with 0 negative marking in Inter & Final).\n\n**தமிழ் குறிப்பு:** ICAI பாடப்புத்தகம், பிரிவு எண்கள் (Section Numbers), மற்றும் Accounting/Auditing Standards (AS / Ind AS / SAs) ஆகியவற்றைத் தெளிவாகக் குறிப்பிட்டுப் பயிற்சி செய்யவும்.";
       }
       const lower = (studentMsg || "").toLowerCase();
       const wantsTamil = /[\u0B80-\u0BFF]/.test(studentMsg) || /tamil|enna|epdi|sollunga|vilakkam|puriyala/.test(lower) || profile.language_pref === "ta";
@@ -2981,7 +2980,7 @@ Student Question: ${studentMsg}`;
       const userChoice = q ? (state.answers[q.id] || "") : "";
 
       chatHistory.push({ sender: "student", text: studentMsg });
-      chatHistory.push({ sender: "coach", text: "Thinking with Gemini NCERT Coach..." });
+      chatHistory.push({ sender: "coach", text: "Thinking with Gemini ICAI CA Coach..." });
       renderChat();
 
       let replyText = null;
@@ -3074,9 +3073,9 @@ Student Question: ${studentMsg}`;
         .map(([s, v]) => `${s}: ${v.score}/${v.max_score}`)
         .join(" | ");
       const report = [
-        `TN NEET-UG Score Report (${latest.student_name || profile.name})`,
+        `TN ICAI CA Score & Exemption Report (${latest.student_name || profile.name})`,
         `Paper: ${latest.module_title}`,
-        `Projected Score: ${latest.projected_720} / 720 (Raw: ${latest.raw_score}/${latest.max_score})`,
+        `Percentage Score: ${latest.projected_720}% (Raw: ${latest.raw_score}/${latest.max_score})`,
         `Correct: ${latest.correct_count} (+4) | Wrong: ${latest.wrong_count} (-${latest.negative_marks_lost}) | Accuracy: ${latest.accuracy_pct}%`,
         sb ? `Subjects: ${sb}` : "",
         `Benchmark: ${latest.tn_college_tier}`
@@ -3091,7 +3090,7 @@ Student Question: ${studentMsg}`;
           setTimeout(() => { btn.textContent = orig; }, 2200);
         }
       } catch (_) {
-        prompt("Copy your NEET Score Summary:", report);
+        prompt("Copy your ICAI CA Score Summary:", report);
       }
     }
 
@@ -3401,7 +3400,7 @@ Student Question: ${studentMsg}`;
       try {
         localStorage.removeItem(STORAGE_KEYS.accessCode);
         localStorage.removeItem(STORAGE_KEYS.pendingToken);
-        localStorage.removeItem("tn_neet_pending_email_v1");
+        localStorage.removeItem("tn_ca_pending_email_v1");
       } catch (_) {}
       if (pendingPollTimer) {
         clearInterval(pendingPollTimer);
@@ -3436,7 +3435,7 @@ Student Question: ${studentMsg}`;
       if (msgEl && reasonHtml) {
         msgEl.innerHTML = reasonHtml;
       }
-      const hasPending = Boolean(localStorage.getItem(STORAGE_KEYS.pendingToken) || localStorage.getItem("tn_neet_pending_email_v1"));
+      const hasPending = Boolean(localStorage.getItem(STORAGE_KEYS.pendingToken) || localStorage.getItem("tn_ca_pending_email_v1"));
       switchAccessGateTab(hasPending ? "code" : "request");
       document.getElementById("access-gate-modal").classList.add("open");
       setTimeout(() => {
@@ -3456,7 +3455,7 @@ Student Question: ${studentMsg}`;
     }
 
     function selectGateRolePill(btn) {
-      const role = btn.getAttribute("data-role") || "NEET Student (Class 11/12/Dropper)";
+      const role = btn.getAttribute("data-role") || "Group 1: CA Foundation Student";
       const inp = document.getElementById("req-purpose");
       if (inp) inp.value = role;
       document.querySelectorAll("#req-role-pills .role-pill-btn").forEach(b => {
@@ -3511,7 +3510,7 @@ Student Question: ${studentMsg}`;
         clearInterval(pendingPollTimer);
         pendingPollTimer = null;
       }
-      if (studentName && studentName !== "Approved User" && (!profile.name || profile.name === "NEET Aspirant")) {
+      if (studentName && studentName !== "Approved User" && (!profile.name || profile.name === "CA Aspirant")) {
         profile.name = studentName;
         if (district) profile.district = district;
         try { localStorage.setItem(STORAGE_KEYS.profile, JSON.stringify(profile)); } catch (_) {}
@@ -3605,7 +3604,7 @@ Student Question: ${studentMsg}`;
       const name = (document.getElementById("req-name").value || "").trim();
       const email = (document.getElementById("req-email").value || "").trim().toLowerCase();
       const district = (document.getElementById("req-district").value || "").trim();
-      const purpose = (document.getElementById("req-purpose").value || "NEET Student (Class 11/12/Dropper)").trim();
+      const purpose = (document.getElementById("req-purpose").value || "Group 1: CA Foundation Student").trim();
 
       if (!name || !email || !email.includes("@")) {
         showGateFeedback("gate-req-feedback", "Please enter your <strong>Full Name</strong> and a valid <strong>Email Address</strong> to unlock your free pass.", false);
@@ -3641,7 +3640,7 @@ Student Question: ${studentMsg}`;
         if (data.request_token) {
           try {
             localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token);
-            localStorage.setItem("tn_neet_pending_email_v1", email);
+            localStorage.setItem("tn_ca_pending_email_v1", email);
           } catch (_) {}
           startPendingApprovalPoll(data.request_token, email);
         }
@@ -3688,9 +3687,9 @@ Student Question: ${studentMsg}`;
     }
 
     async function loadAdminConsoleData() {
-      const adminKey = urlParams.get("admin") || sessionStorage.getItem("tn_neet_admin_key") || "";
+      const adminKey = urlParams.get("admin") || sessionStorage.getItem("tn_ca_admin_key") || "";
       if (!adminKey) return;
-      sessionStorage.setItem("tn_neet_admin_key", adminKey);
+      sessionStorage.setItem("tn_ca_admin_key", adminKey);
       document.getElementById("admin-access-modal").classList.add("open");
       const wrap = document.getElementById("admin-requests-table-wrap");
       const strip = document.getElementById("admin-analytics-strip");
@@ -3770,8 +3769,8 @@ Student Question: ${studentMsg}`;
         const r = await apiFetch(`/api/public_config`);
         const cfg = r.ok ? await r.json() : null;
         if (cfg) {
-          if (cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_neet_ga_id")) {
-            localStorage.setItem("tn_neet_ga_id", cfg.ga_measurement_id);
+          if (cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_ca_ga_id")) {
+            localStorage.setItem("tn_ca_ga_id", cfg.ga_measurement_id);
             if (typeof window.gtag === "function") {
               window.gtag("config", cfg.ga_measurement_id, { send_page_view: true });
             }
@@ -3834,15 +3833,15 @@ Student Question: ${studentMsg}`;
         openAccessGateModal();
       }
       const pendingTok = localStorage.getItem(STORAGE_KEYS.pendingToken);
-      const pendingEm = localStorage.getItem("tn_neet_pending_email_v1");
+      const pendingEm = localStorage.getItem("tn_ca_pending_email_v1");
       if (pendingTok || pendingEm) {
         startPendingApprovalPoll(pendingTok, pendingEm);
       }
     }
 
     // YouTube Embed URL for Introductory Explainer Video (falls back or toggles to built-in 1080p MP4 player)
-    const INTRO_YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/ChJSZgvqAuY?autoplay=1&rel=0";
-    let introUseLocalMp4 = false;
+    const INTRO_YOUTUBE_EMBED_URL = "";
+    let introUseLocalMp4 = true;
 
     function openIntroVideoModal() {
       trackNeetEvent("intro_video_played", {});
@@ -3880,7 +3879,7 @@ Student Question: ${studentMsg}`;
     }
 
     async function saveProfile() {
-      profile.name = document.getElementById("prof-name").value.trim() || "NEET Aspirant";
+      profile.name = document.getElementById("prof-name").value.trim() || "CA Aspirant";
       profile.district = document.getElementById("prof-district").value.trim() || "Chennai";
       profile.board = document.getElementById("prof-board").value;
       profile.quota_category = document.getElementById("prof-quota").value;

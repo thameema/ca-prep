@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:13,961
+Welcome! The Tamil Nadu ICAI CA Mastery Hub is built to help Tamil Nadu students pass Chartered Accountancy in their first attempt.
+
+2
+00:00:14,001 --> 00:00:34,840
+It covers all 3 student groups — CA Foundation, CA Intermediate Group I & II, and CA Final & SPOM — with 430+ verified questions, RTPs, MTPs, and a 24/7 Bilingual Gemini AI Coach.
+
+3
+00:00:34,880 --> 00:00:52,509
+First is the Exam & Coach Workspace. Whether you enter via CA Foundation after Class 12 or Direct Entry into CA Intermediate and Final, pick your exact mock test instantly.
+
+4
+00:00:52,549 --> 00:01:11,158
+It enforces exact ICAI rules: -0.25 negative marking for Foundation MCQs and +2 / 0 for Inter & Final Case Scenarios, with instant English + Tamil switching.
+
+5
+00:01:11,198 --> 00:01:26,112
+As soon as you answer a question, it reveals the exact Companies Act, Income Tax, GST section, or Accounting Standard (AS / Ind AS) with step-by-step working notes in English and Tamil.
+
+6
+00:01:26,152 --> 00:01:41,747
+Stuck on a calculation or statutory section? Click 'Ask Coach' or 'Explain in Tamil' on the right, and the Gemini AI CA Coach walks you through the working notes immediately.
+
+7
+00:01:41,787 --> 00:01:57,106
+The second tab is the ICAI Past Papers, RTPs & Case Scenarios Archive, including bilingual Tamil booklets and a Statutory Amendments & Disputed Questions dossier.
+
+8
+00:01:57,146 --> 00:02:16,626
+The third tab is the Score, 60% Exemption & Aggregate Tracker — automatically checking ICAI's 40% paper floor, 50% group aggregate, and 60%+ 3-attempt paper exemption rule.
+
+9
+00:02:16,666 --> 00:02:40,463
+The fourth tab covers Tamil Nadu Free Public Coaching Institutes — TAHDCO 100% Free CA Coaching, Naan Mudhalvan, ICAI Scholarships, Charitable Trusts, and all 13 SIRC TN branches.
+
+10
+00:02:40,503 --> 00:02:49,814
+Practice daily with confidence — claim your 60%+ exemptions and achieve your Chartered Accountant dream. All the Best!

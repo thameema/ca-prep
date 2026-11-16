@@ -883,6 +883,37 @@ html = html.replace(
     'const DEFAULT_TUNNEL_URL = "https://same-reasonably-graduates-passengers.trycloudflare.com";',
 )
 
+# Replace NEET Intro Video URL & MP4 paths with dedicated CA Walkthrough Video
+html = html.replace("video/tamil_nadu_neet_explainer.mp4", "video/tamil_nadu_ca_explainer.mp4")
+html = html.replace("video/tamil_nadu_neet_explainer_en.vtt", "video/tamil_nadu_ca_explainer_en.vtt")
+html = html.replace("Tamil_Nadu_NEET_720_Mastery_Explainer.mp4", "Tamil_Nadu_ICAI_CA_Mastery_Explainer.mp4")
+html = html.replace(
+    'const INTRO_YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/ChJSZgvqAuY?autoplay=1&rel=0";\n    let introUseLocalMp4 = false;',
+    'const INTRO_YOUTUBE_EMBED_URL = "";\n    let introUseLocalMp4 = true;',
+)
+html = html.replace(
+    '<a href="https://youtu.be/ChJSZgvqAuY" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none;padding:6px 12px;font-size:12px;background:#dc2626;border-color:#dc2626;color:#fff;">Open on YouTube &rarr;</a>\n          <button type="button" id="toggle-video-source-btn" class="btn-outline" style="padding:6px 12px;font-size:12px;" onclick="toggleIntroVideoPlayerSource()">Use Built-in MP4 Player</button>',
+    '<a href="https://www.youtube.com/@icaiorgtube" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none;padding:6px 12px;font-size:12px;background:#0f766e;border-color:#0f766e;color:#fff;">ICAI CA Tube (BoS Live) &rarr;</a>',
+)
+
+# Clean up any remaining NEET strings in JS helpers
+html = html.replace("You are a senior Tamil Nadu NEET-UG Expert Coach tutoring", "You are a senior Tamil Nadu ICAI Chartered Accountancy (CA) Faculty & Coach tutoring")
+html = html.replace("Active Question (${q ? q.subject + ' - ' + q.chapter : 'General NEET'}):", "Active Question (${q ? q.subject + ' - ' + q.chapter : 'General ICAI CA'}):")
+html = html.replace("Verified NCERT Explanation:", "Verified ICAI Statutory / Working Note Solution:")
+html = html.replace(
+    "**NEET-UG Coaching Guide (EN & தமிழ்)**\\n\\nFocus strictly on **NCERT Class 11 & 12**: Biology carries **360/720 marks**, Chemistry **180**, Physics **180** (+4 correct, -1 wrong).\\n\\n**தமிழ் குறிப்பு:** உயிரியல் மற்றும் வேதியியலில் NCERT பாடப்புத்தகத்தை வரிக்கு வரி படிக்கவும்; ஊகத்தின் அடிப்படையில் விடையளித்து -1 மதிப்பெண் இழப்பதைத் தவிர்க்கவும்.",
+    "**ICAI CA New Scheme Coaching Guide (EN & தமிழ்)**\\n\\nFocus on **ICAI BoS Study Material, RTPs & MTPs**: Minimum **40% per paper**, **50% Group Aggregate**, and **60%+ for 3-Attempt Paper Exemption** (+1/-0.25 in Foundation P3/P4; 30% Case-Scenario MCQs with 0 negative marking in Inter & Final).\\n\\n**தமிழ் குறிப்பு:** ICAI பாடப்புத்தகம், பிரிவு எண்கள் (Section Numbers), மற்றும் Accounting/Auditing Standards (AS / Ind AS / SAs) ஆகியவற்றைத் தெளிவாகக் குறிப்பிட்டுப் பயிற்சி செய்யவும்.",
+)
+html = html.replace("Thinking with Gemini NCERT Coach...", "Thinking with Gemini ICAI CA Coach...")
+html = html.replace("TN NEET-UG Score Report", "TN ICAI CA Score & Exemption Report")
+html = html.replace("Projected Score: ${latest.projected_720} / 720", "Percentage Score: ${latest.projected_720}%")
+html = html.replace("prompt(\"Copy your NEET Score Summary:\", report);", "prompt(\"Copy your ICAI CA Score Summary:\", report);")
+html = html.replace('"NEET Aspirant"', '"CA Aspirant"')
+html = html.replace('"NEET Student (Class 11/12/Dropper)"', '"Group 1: CA Foundation Student"')
+html = html.replace("tn_neet_pending_email_v1", "tn_ca_pending_email_v1")
+html = html.replace("tn_neet_admin_key", "tn_ca_admin_key")
+html = html.replace("tn_neet_ga_id", "tn_ca_ga_id")
+
 (CA_DIR / "index.html").write_text(html, encoding="utf-8")
 shutil.copyfile(CA_DIR / "index.html", CA_DIR / "ca_interactive_practice.html")
 
