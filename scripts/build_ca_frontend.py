@@ -879,8 +879,8 @@ html = html.replace(old_filter_papers, new_filter_papers)
 
 html = html.replace("if (/^NEET-[A-Z0-9]{4,10}$/.test(cleanCode)", "if (/^(CA|NEET)-[A-Z0-9]{4,10}$/.test(cleanCode)")
 html = html.replace(
-    'const DEFAULT_TUNNEL_URL = "https://wallpapers-regular-gallery-dash.trycloudflare.com";',
-    'const DEFAULT_TUNNEL_URL = "https://same-reasonably-graduates-passengers.trycloudflare.com";',
+    'const DEFAULT_TUNNEL_URL = "https://magnitude-clients-special-perspective.trycloudflare.com";',
+    'const DEFAULT_TUNNEL_URL = "https://magnitude-clients-special-perspective.trycloudflare.com";',
 )
 
 # Replace NEET Intro Video URL & MP4 paths with dedicated CA Walkthrough Video
